@@ -1,0 +1,209 @@
+.profile {
+    background: #f5f5f5;
+    border-radius: 40px;
+    margin-left: 98px;
+    margin-right: 98px;
+}
+
+.profileTop {
+    display: flex;
+    padding-top: 67px;
+    padding-left: 37px;
+    padding-right: 34px;
+}
+
+.topLeft {
+    flex: 2;
+    text-align: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 40px;
+}
+
+.profileAvatar {
+    width: 147px;
+    height: 149px;
+    margin: 51px 180px 24px 180px;
+    background: #0e1952;
+    border-radius: 40px;
+}
+
+.profileName {
+    width: 50%;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 43px;
+    color: #000000;
+    margin: 0px 180px 33px 180px;
+}
+
+.profileBook {
+    width: 197px;
+    height: 68px;
+    background: #25b79d;
+    border-radius: 40px;
+    margin: 0px 155px 40px 155px;
+}
+
+.bookText {
+    width: 99px;
+    height: 26px;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+}
+
+.topRight {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoTop {
+    display: flex;
+}
+
+.infoCard {
+    flex: 1;
+    height: 245px;
+    background: #ffffff;
+    border-radius: 30px;
+    margin-left: 12px;
+}
+
+.cardTitle {
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 24px;
+    line-height: 29px;
+    color: #0e1952;
+}
+
+.infoBottom {
+    flex: 1;
+    border-radius: 40px;
+    background: #ffffff;
+    margin-left: 14px;
+    margin-top: 21px;
+}
+
+.profileBottom {
+    display: flex;
+    margin-top: 33px;
+    padding-bottom: 28px;
+    padding-right: 34px;
+}
+
+.bottomLeft {
+    background: #ffffff;
+    border-radius: 30px;
+    flex: 2;
+    margin-left: 37px;
+}
+
+.bottomInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.bottomInfoText {
+    margin-top: 61px;
+    margin-bottom: 38px;
+    width: 194px;
+    height: 43px;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    color: #0e1952;
+}
+
+.bottomInfoTextDetail {
+    margin-bottom: 38px;
+    height: 38px;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    color: #000000;
+}
+
+.bottomRight {
+    flex: 3;
+    background: #ffffff;
+    border-radius: 30px;
+    margin-left: 23px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cmtTitle {
+    width: 296px;
+    height: 43px;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    color: #0e1952;
+}
+
+.patientCmt {
+    padding-left: 49px;
+    padding-right: 44px;
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btnCmt {
+    flex: 1;
+    background: #ffffff;
+    border: 0.5px solid #000000;
+    border-radius: 24px;
+    margin-top: 50px;
+}
+
+.btnCmtTitle {
+    width: 281px;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33px;
+    line-height: 43px;
+    color: #25b79d;
+}
+
+.cmtList {
+    padding-top: 116px;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookingHistory {
+    padding-left: 49px;
+    padding-right: 44px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cmtItem {
+    flex: 1;
+    background: #ffffff;
+    border: 0.5px solid #000000;
+    border-radius: 24px;
+    margin-bottom: 10px;
+}
