@@ -13,7 +13,8 @@ export default function Profile() {
         const [viewUser, setUser] = useState({});
         const { user } = useContext(AuthContext);
 
-        const handleAddReview = async (e) => {
+        const handleAddReview = async(e) => {
+            
         }
 
         const handleBookBtn = async(e) => {
