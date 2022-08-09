@@ -1,0 +1,120 @@
+.calendarWrapper {
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+    background: #f4f6f8;
+    border-radius: 60px;
+}
+
+.calendar {
+    width: 90%;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #f4f6f8;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #0e1952;
+    margin-bottom: 16px;
+}
+
+.nav {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #0e1952;
+    background-color: #fff;
+    border-radius: 99px;
+    color: #0e1952;
+    margin-left: 269px;
+    margin-right: 269px;
+    cursor: pointer;
+}
+
+.datetime {
+    margin: 0 auto;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.week-container,
+.day-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+}
+
+.week-cell,
+.day-cell,
+.time-cell {
+    flex: 0 0 calc(100% / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    cursor: pointer;
+}
+
+.day-cell--faded {
+    opacity: 0.4;
+}
+
+.day-cell--today {
+    border-radius: 99px;
+    background-color: #f4f6f8;
+    color: black;
+}
+
+.selected, .time-selected {
+    border-radius: 99px;
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+.timePicker{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: #fff;
+    margin: 24px auto ;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.time-cell{ 
+    font-size: 1.3em;
+}
+
+.busyTime{
+    border-radius: 99px;
+    background-color: salmon;
+    color: #fff;
+}
+
+.bookNowContain{
+    display: flex;
+}
+
+.bookNowBtn{
+    margin: 20px auto;
+    width: 197px;
+    height: 68px;
+    background: #0e1952;
+    border-radius: 40px;
+}
+
+.bookNowText {
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+}

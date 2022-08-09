@@ -1,0 +1,121 @@
+.userCard {
+    margin-top: 60px;
+    margin-left: 86px;
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+}
+
+.userCard:hover{
+    background: rgb(231, 228, 228);
+}
+
+.cardLeft {
+    flex: 1;
+}
+
+.cardRight {
+    flex: 5;
+}
+
+.avatar {
+    width: 114px;
+    height: 114px;
+    margin: 36px 42px 59px 49px;
+    border-radius: 50px;
+}
+
+.cardRight {
+    margin-top: 36px;
+}
+
+.name {
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 16px;
+    color: #434343;
+}
+
+.info {
+    margin-top: 13px;
+    display: flex;
+}
+
+.contact {
+    flex: 1;
+    margin-right: 16px;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 16px;
+    color: #434343;
+    opacity: 0.6;
+}
+
+.online {
+    display: flex;
+    flex: 6;
+}
+
+.onlineIcon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: limegreen;
+    margin-right: 16px;
+    border: 2px solid white;
+}
+
+.onlineText {
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 16px;
+    color: #434343;
+    opacity: 0.6;
+}
+
+.desc {
+    margin-top: 11px;
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.ratingImg{
+    width: 32px;
+    height: 32px;
+    margin-top: 34px;
+    margin-right: 13px;
+}
+
+.control{
+    display: flex;
+}
+
+.rating{
+    flex:1;
+}
+
+.ratingNumber{
+    font-family: 'Acephimere';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.booking{
+    flex: 6;
+}
