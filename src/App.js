@@ -11,6 +11,8 @@ import {
     Route,
     Routes,
 } from "react-router-dom";
+import PatientProfilePage from "./pages/PatientProfilePage/PatientProfilePage";
+import TodoPage from "./pages/TodoPage/TodoPage";
 
 function App() {
     const {user} = useContext(AuthContext)
@@ -23,6 +25,8 @@ function App() {
                 <Route  path="/register" element={user ? (<Navigate to="/" />) : (<Register />)} />
                 <Route  path="/profile/:username" element={!user ? (<Navigate to="/" />) : (<Profile />)} />
                 <Route  path="/calendar/:username" element={!user ? (<Navigate to="/" />) : (<Calendar />)} />
+                <Route  path="/patientprofile" element= { <PatientProfilePage /> } />
+                <Route  path="/todo" element= { <TodoPage /> } />
             </Routes>
         </Router>
     )

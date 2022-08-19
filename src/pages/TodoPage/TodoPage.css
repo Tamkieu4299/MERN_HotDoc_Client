@@ -1,0 +1,51 @@
+* {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* outline: solid 1px lightcoral; */
+}
+
+/* .todopage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // no
+    align-items: center;
+} */
+
+/* h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: teal;
+} */
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.2;
+    color: gray;
+}
+
+.text-overflow-prevent{
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis
+}
+
+.box-container {
+    background-color: powderblue;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px gainsboro;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+}
+
+.box-container:nth-child(even) {
+    background-color: lightskyblue;
+}
+
+.box-children-icon-children:hover {
+    transform: scale(1.5);
+}

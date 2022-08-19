@@ -1,0 +1,11 @@
+.patientshow-leftcard {
+    box-shadow: 2px 2px 2px gray;
+    background-color: gainsboro;
+    border-radius: 1em 1em;
+}
+
+.patientshow-rightcard {
+    box-shadow: 2px 2px 2px gray;
+    background-color: silver;
+    border-radius: 1em 1em;
+}
