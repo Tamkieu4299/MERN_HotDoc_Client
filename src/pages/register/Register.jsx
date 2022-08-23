@@ -13,7 +13,7 @@ export default function Register() {
     const phone = useRef();
     const idnumber = useRef();
     const navigate = useNavigate();
-    
+
     const handleClickCustomer = async (e) => {
         e.preventDefault();
         if (passwordAgain.current.value !== password.current.value) {
