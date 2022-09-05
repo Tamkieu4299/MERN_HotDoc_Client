@@ -20,7 +20,7 @@ export default function Navbar() {
                 <div className="logoShape"></div>
             </div>
             <div className="navCenter">
-                <div className="page">Forum</div>
+                <Link to={"/"}><div className="page">Forum</div></Link>
                 <div className="page">Meet Doctors</div>
                 <div className="page">Messenger</div>
                 <div className="page">Pharmacity</div>

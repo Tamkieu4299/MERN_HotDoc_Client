@@ -1,0 +1,101 @@
+.viewWrapper {
+    width: 90%;
+    height: 100%;
+    background-color: #f4f6f8;
+    margin-left: 87px;
+    margin-right: 87px;
+    border-radius: 40px;
+    box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.12);
+}
+
+.viewTop {
+    width: 87%;
+    display: flex;
+    margin-left: 94px;
+}
+
+.viewMiddle{
+    width: 87%;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 94px;
+}
+
+.filterBtn {
+    margin-top: 80px;
+    margin-right: 64px;
+    width: 197px;
+    height: 68px;
+    border-radius: 40px;
+}
+
+.filterBtnText {
+    font-family: "Acephimere";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 38px;
+    color: #0e1952;
+}
+
+.filterBtn.daily {
+    background-color: #e6defc;
+}
+
+.filterBtn.tips {
+    background-color: #ffdeb7;
+}
+
+.filterBtn.facts {
+    background-color: #25b79d;
+}
+
+.filterBtn.rec {
+    background-color: #ffbb6d;
+}
+
+.viewBottom {
+    display: flex;
+
+}
+
+.viewLeft {
+    flex: 1.5;
+}
+
+.viewRight {
+    flex: 1;
+}
+
+.adBanner {
+    margin-top: 60px;
+    padding-left: 50px;
+    width: 90%;
+}
+
+.adImg {
+    width: 90%;
+    box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+}
+
+.ranking {
+    width: 80%;
+    margin-top: 55px;
+    margin-left: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+}
+
+.rankTitle{
+    margin-left: 162px;
+    font-family: 'Acephimere';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: #000000;
+    opacity: 0.6;
+    padding-top:34px;
+} 

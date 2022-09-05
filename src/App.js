@@ -2,6 +2,7 @@ import Login from "../src/pages/login/Login";
 import Home from "../src/pages/home/Home";
 import Register from "../src/pages/register/Register";
 import Profile from "../src/pages/profile/Profile";
+import Viewdoctors from "./pages/viewdoctors/Viewdoctors";
 import Calendar from "./pages/calendar/Calendar";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
@@ -25,6 +26,10 @@ function App() {
                 <Route
                     path="/register"
                     element={user ? <Navigate to="/" /> : <Register />}
+                />
+                <Route
+                    path="/viewdoctors"
+                    element={!user ? <Navigate to="/" /> : <Viewdoctors />}
                 />
                 <Route
                     path="/profile/:username"

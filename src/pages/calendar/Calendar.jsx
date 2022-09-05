@@ -85,8 +85,8 @@ export default function Calendar() {
             dayArr[4].toString();
         console.log(bookingStartDate);
         if (dayArr[4] === 30) {
-            dayArr[3]++;
-            dayArr[4] = 0;
+            // dayArr[3]++;
+            dayArr[4] = 59;
         }
         const bookingEndDate =
             (dayArr[1] + 1).toString() +
