@@ -34,7 +34,7 @@
 
 .navCenter {
     display: flex;
-    flex: 12;
+    flex: 10;
 }
 
 .page {
@@ -48,15 +48,18 @@
 }
 
 .navRight {
-    flex: 1;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
 }
 
-.btn {
-    width: 197px;
-    height: 68px;
+.navBtn {
+    width: 90px; 
+    height: 29px;
     background: #0e1952;
-    border-radius: 40px;
-    margin-right: 96px;
+    border-radius: 20px;
+    /* margin-right: 96px; */
 }
 
 .btnText {
@@ -68,4 +71,13 @@
     font-size: 22px;
     line-height: 26px;
     color: #ffffff;
+}
+
+.navAvatar{
+    width: 40px;
+    height: 40px;
+    /* margin-right: 30px; */
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
 }

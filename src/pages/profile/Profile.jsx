@@ -4,6 +4,7 @@ import ReviewCard from "../../components/reviewCard/ReviewCard";
 import { useState, useEffect, useContext, useRef } from "react";
 import { useParams } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Profile() {
@@ -13,13 +14,11 @@ export default function Profile() {
         const [viewUser, setUser] = useState({});
         const { user } = useContext(AuthContext);
 
-        const handleAddReview = async(e) => {
-            
-        }
+        const handleAddReview = async (e) => {};
 
-        const handleBookBtn = async(e) => {
+        const handleBookBtn = async (e) => {
             e.preventDefault();
-        }
+        };
 
         useEffect(() => {
             const fetchUser = async () => {
@@ -47,9 +46,11 @@ export default function Profile() {
                             <span className="profileName">
                                 {viewUser.username}
                             </span>
+                            <Link to={`/calendar/${username}`} >
                             <button className="profileBook">
                                 <span className="bookText">Book now</span>
                             </button>
+                            </Link>
                         </div>
                         <div className="topRight">
                             <div className="infoTop">
@@ -107,7 +108,7 @@ export default function Profile() {
                                     </span>
                                 </button>
                                 <div className="cmtList">
-                                    <ReviewCard user={viewUser}/>
+                                    <ReviewCard user={viewUser} />
                                 </div>
                             </div>
                         </div>
