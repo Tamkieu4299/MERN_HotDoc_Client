@@ -40,7 +40,7 @@ export default function Viewdoctors() {
                     </button>
                 </div>
                 <div className="viewMiddle">
-                    <Share />
+                    {/* <Share /> */}
                 </div>
                 <div className="viewBottom">
                     <div className="viewLeft">

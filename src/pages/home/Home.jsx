@@ -85,20 +85,9 @@ export default function Home() {
                 </div>
                 <div className="homeBottom">
                     <div className="homeLeft">
-                        {/* {allDoctors.length
-                            ? allDoctors.map((doc) => (
-                                  <UserCard user={doc} key={doc._id} />
-                              ))
-                            : "No Doctors"}  */}
                         {posts.length
                             ? posts.map((p) => <Post post={p} />)
                             : "Let's make a post"}
-
-                        {/* {
-                           fakeDataBlog.length > 0 && fakeDataBlog.map((e) => (
-                            <Blog key={e.id} item={e} />
-                            )) 
-                        } */}
                     </div>
                     <div className="homeRight">
                         <div className="adBanner">

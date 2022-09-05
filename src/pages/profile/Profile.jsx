@@ -1,6 +1,8 @@
 import "./profile.css";
 import Navbar from "../../components/navbar/Navbar";
 import ReviewCard from "../../components/reviewCard/ReviewCard";
+import Share from "../../components/share/Share";
+import Reviewbox from "../../components/reviewbox/Reviewbox";
 import { useState, useEffect, useContext, useRef } from "react";
 import { useParams } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
@@ -13,8 +15,11 @@ export default function Profile() {
         const username = useParams().username;
         const [viewUser, setUser] = useState({});
         const { user } = useContext(AuthContext);
-
-        const handleAddReview = async (e) => {};
+        const [shown, setShown] = useState(false);
+        const handleAddReview = async (e) => {
+            e.preventDefault();
+            setShown(!shown);
+        };
 
         const handleBookBtn = async (e) => {
             e.preventDefault();
@@ -56,21 +61,38 @@ export default function Profile() {
                             <div className="infoTop">
                                 <div className="infoCard dept">
                                     <span className="cardTitle">
-                                        Currently Department
+                                        Current Department
                                     </span>
+                                    <p className="infoDepartment">
+                                        {viewUser?.currentDepartment ? 
+                                        viewUser.currentDepartment
+                                        :"NaN"}
+                                    </p>
                                 </div>
                                 <div className="infoCard spec">
                                     <span className="cardTitle">
                                         Specialization
                                     </span>
+                                    <p className="infoDepartment">
+                                        {viewUser?.services ? 
+                                        viewUser.services
+                                        :"NaN"}
+                                    </p>
                                 </div>
                                 <div className="infoCard exp">
                                     <span className="cardTitle">
                                         Work expererience
                                     </span>
+                                    <p className="infoDepartment">
+                                        {viewUser?.workingDesc ? 
+                                        viewUser.workingDesc
+                                        :"NaN"}
+                                    </p>
                                 </div>
                             </div>
-                            <div className="infoBottom"></div>
+                            {/* <div className="infoBottom">
+
+                            </div> */}
                         </div>
                     </div>
                     <div className="profileBottom">
@@ -102,11 +124,12 @@ export default function Profile() {
                                 <span className="cmtTitle">
                                     Patient reviews
                                 </span>
-                                <button className="btnCmt">
+                                <button className="btnCmt" onClick={handleAddReview}>
                                     <span className="btnCmtTitle">
                                         + Add a comment
                                     </span>
                                 </button>
+                                {shown && <Reviewbox viewUser={viewUser} />}
                                 <div className="cmtList">
                                     <ReviewCard user={viewUser} />
                                 </div>

@@ -21,7 +21,7 @@ export default function Navbar() {
             </div>
             <div className="navCenter">
                 <Link to={"/"}><div className="page">Forum</div></Link>
-                <div className="page">Meet Doctors</div>
+                <Link to={"/viewdoctors"}><div className="page">Meet Doctors</div></Link>
                 <div className="page">Messenger</div>
                 <div className="page">Pharmacity</div>
             </div>

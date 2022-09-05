@@ -66,11 +66,12 @@
 
 .infoTop {
     display: flex;
+    height: 100%;
 }
 
 .infoCard {
     flex: 1;
-    height: 245px;
+    /* height: 245px; */
     background: #ffffff;
     border-radius: 30px;
     margin-left: 12px;
@@ -206,4 +207,8 @@
     border: 0.5px solid #000000;
     border-radius: 24px;
     margin-bottom: 10px;
+}
+
+.infoDepartment{
+    
 }
