@@ -1,0 +1,63 @@
+.drugList {
+    margin: 50px !important;
+    display: flex;
+    justify-content: space-around;
+    gap :150px;
+}
+
+.cardTitle {
+    margin-left: 0px;
+    /* font-size: 1.2rem; */
+}
+
+/* image */
+.drugImage {
+    background-image: url("../../../public/assets/imgs/drugstore/drug.jpg");
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 15%;
+}
+
+/* Filter CSS */
+.col-filter {
+    margin-top: 0.5%;
+}
+
+/* Drug Item CSS */
+.col-item {
+    text-align: center;
+    text: #000000;
+}
+
+.productWrapper > .container {
+    margin: 0px 50px;
+}
+
+.productItem {
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 5%;  
+}
+
+.productItem > .card-body {
+    padding: 0px;
+}
+
+.infoBtn {
+    margin-top: 2%;
+    background-color: #B494FF;
+    width: 197px;
+    height: 68px;
+    border-radius: 40px;
+}
+
+.buyBtn {
+    /* margin-top: 8%; */
+    background-color: #FFBB6D;
+    width: 197px;
+    height: 68px;
+    border-radius: 40px;
+}
+
+

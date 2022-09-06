@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PatientProfilePage from "./pages/PatientProfilePage/PatientProfilePage";
 import TodoPage from "./pages/TodoPage/TodoPage";
 import DetailBlog from "./components/blog/DetailBlog";
+import Drugstore from "./pages/drugstore/Drugstore";
 
 function App() {
     const { user } = useContext(AuthContext);
@@ -45,6 +46,7 @@ function App() {
                 />
                 <Route path="/todo" element={<TodoPage />} />
                 <Route path="/detail-blog/:id" element={<DetailBlog />} />
+                <Route path="/drugstore" element={<Drugstore />} />
             </Routes>
         </Router>
     );
