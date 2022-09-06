@@ -6,7 +6,7 @@ export default function UserCard({ user }) {
 
     return (
         <>
-            <Link to={`profile/${user.username}`}>
+            <Link to={`/profile/${user.username}`}>
                 <div className="userCard">
                     <div className="cardLeft">
                         <img
