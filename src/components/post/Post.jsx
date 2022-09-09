@@ -9,17 +9,48 @@ import { format } from "timeago.js";
 export default function Post({ post }) {
     const [like, setLike] = useState(post.likes.length);
     const [isLiked, setIsLiked] = useState(false);
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState();
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const { user: currentUser } = useContext(AuthContext);
-
+    const [allCus, setCus] = useState([]);
+    
+    
+    useEffect(()=>{
+        const fetchUsers = async () =>{
+            const res = await axios.get("/customers/all");
+            setCus(res.data);
+        }
+        fetchUsers();
+    }, [currentUser._id]);
+    
+    // useEffect(() => {
+    //     const fetchUser = async () => {
+    //         const res = await axios.get(`/users?userId=${post.userId}`);
+    //         setUser(res.data);
+    //     };
+    //     fetchUser();
+    // }, [post.userId]);
     useEffect(() => {
-        const fetchUser = async () => {
-            const res = await axios.get(`/users?userId=${post.userId}`);
+        const fetchDoc = async () => {
+            const res = await axios.get(`/doctors?doctorId=${post.userId}`);
             setUser(res.data);
         };
-        fetchUser();
-    }, [post.userId]);
+        const fetchCus = async () => {
+            const res = await axios.get(`/customers?customerId=${post.userId}`);
+            setUser(res.data);
+        };
+
+        const fetchTypeUser = async (n) =>{
+            for(const u of allCus){
+                if(n===u._id) {
+                    fetchCus();
+                    return;
+                }
+            }
+            fetchDoc();
+        }
+        fetchTypeUser(post.userId);
+    }, [allCus]);
 
     const likeHandler = () => {
         try {
@@ -30,7 +61,7 @@ export default function Post({ post }) {
         setLike(isLiked ? like - 1 : like + 1);
         setIsLiked(!isLiked);
     };
-    return (
+    return (user &&
         <div className="post">
             <div className="postWrapper">
                 <div className="postTop">
@@ -38,9 +69,9 @@ export default function Post({ post }) {
                         <Link to={`profile/${user.username}`}>
                             <img
                                 src={
-                                    user.profilePicture
-                                        ? PF + user.profilePicture
-                                        : PF + "person/noAvatar.png"
+                                    user?.profilePicture
+                                        // ? PF + user.profilePicture
+                                        // : PF + "person/noAvatar.png"
                                 }
                                 alt=""
                                 className="postProfileImg"

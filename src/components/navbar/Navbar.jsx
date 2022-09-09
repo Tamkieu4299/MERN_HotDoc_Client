@@ -23,7 +23,7 @@ export default function Navbar() {
                 <Link to={"/"}><div className="page">Forum</div></Link>
                 <Link to={"/viewdoctors"}><div className="page">Meet Doctors</div></Link>
                 <div className="page">Messenger</div>
-                <div className="page">Pharmacity</div>
+                <Link to={"/drugstore"}><div className="page">Pharmacity</div></Link>
             </div>
             <div className="navRight">
                 {user && (
@@ -31,8 +31,8 @@ export default function Navbar() {
                         <img
                             src={
                                 user?.profilePicture
-                                    ? PF + user.profilePicture
-                                    : PF + "person/noAvatar.png"
+                                    // ? PF + user.profilePicture
+                                    // : PF + "person/noAvatar.png"
                             }
                             alt=""
                             className="navAvatar"

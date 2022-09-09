@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import TodoChilden from "./TodoChilden";
 import TodoForm from "./TodoForm";
 
-export default function TodoParent() {
-    const [TODOLIST, setTodoList] = useState([]); // empty array
+export default function TodoParent({medicines}) {
+    const [TODOLIST, setTodoList] = useState(medicines); // empty array
 
     // 1 out of 4
     const addOneTodo = (param) => {

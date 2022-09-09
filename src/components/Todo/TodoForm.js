@@ -40,7 +40,7 @@ export default function TodoForm(props) {
                                 onChange={handleOnChange}
                                 ref={inputRef} // focus on input box
                                 className="form-control"
-                                />
+                            />
                             <button type="submit" className="btn btn-primary">Update</button>
                         </>
                     ) : (

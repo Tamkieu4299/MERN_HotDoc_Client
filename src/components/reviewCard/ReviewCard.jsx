@@ -60,8 +60,8 @@ export default function ReviewCard({ user }) {
                                     <img
                                         src={
                                             user?.profilePicture
-                                                ? PF + r[0].profilePicture
-                                                : PF + "person/noAvatar.png"
+                                            // ? PF + r[0].profilePicture
+                                            // : PF + "person/noAvatar.png"
                                         }
                                         alt=""
                                         className="reviewAvatar"

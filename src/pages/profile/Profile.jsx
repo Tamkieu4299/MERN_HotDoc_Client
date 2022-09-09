@@ -1,20 +1,62 @@
 import "./profile.css";
 import Navbar from "../../components/navbar/Navbar";
 import ReviewCard from "../../components/reviewCard/ReviewCard";
-import Share from "../../components/share/Share";
 import Reviewbox from "../../components/reviewbox/Reviewbox";
 import { useState, useEffect, useContext, useRef } from "react";
 import { useParams } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import PatientShow from "../../components/PatientProfile/PatientShow";
 
 export default function Profile() {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const username = useParams().username;
+    const { user } = useContext(AuthContext);
+    const [viewUser, setUser] = useState();
+    const [allCus, setCus] = useState([]);
+
+    useEffect(()=>{
+        const fetchUsers = async () =>{
+            const res = await axios.get("/customers/all");
+            setCus(res.data);
+        }
+        fetchUsers();
+    }, [username]);
+
+    // useEffect(()=>{
+    //     const isDoctor = (n) => {
+    //         for(const u of allCus){
+    //             if(n===u.username) setIsDoc(false);
+    //         }
+    //         console.log(isDoc);
+    //     }
+    //     isDoctor(username);
+    // },[]);
+
+    useEffect(() => {
+            const fetchDoc = async () => {
+                const res = await axios.get(`/doctors?doctorname=${username}`);
+                setUser(res.data);
+            };
+            const fetchCus = async () => {
+                const res = await axios.get(`/customers?customername=${username}`);
+                setUser(res.data);
+            };
+
+            const fetchTypeUser = async (n) =>{
+                for(const u of allCus){
+                    if(n===u.username) {
+                        fetchCus();
+                        return;
+                    }
+                }
+                fetchDoc();
+            }
+            fetchTypeUser(username);
+        }, [allCus]);
+
     const ProfileDoctor = () => {
-        const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-        const username = useParams().username;
-        const [viewUser, setUser] = useState({});
-        const { user } = useContext(AuthContext);
         const [shown, setShown] = useState(false);
         const handleAddReview = async (e) => {
             e.preventDefault();
@@ -25,13 +67,13 @@ export default function Profile() {
             e.preventDefault();
         };
 
-        useEffect(() => {
-            const fetchUser = async () => {
-                const res = await axios.get(`/doctors?doctorname=${username}`);
-                setUser(res.data);
-            };
-            fetchUser();
-        }, [username]);
+        // useEffect(() => {
+        //     const fetchUser = async () => {
+        //         const res = await axios.get(`/doctors?doctorname=${username}`);
+        //         setUser(res.data);
+        //     };
+        //     fetchUser();
+        // }, [username]);
 
         return (
             <>
@@ -42,8 +84,8 @@ export default function Profile() {
                             <img
                                 src={
                                     user?.profilePicture
-                                        ? PF + viewUser.profilePicture
-                                        : PF + "person/noAvatar.png"
+                                        // ? PF + viewUser.profilePicture
+                                        // : PF + "person/noAvatar.png"
                                 }
                                 alt=""
                                 className="profileAvatar"
@@ -141,9 +183,19 @@ export default function Profile() {
         );
     };
 
+    const ProfilePatient = () => {
+        return(
+            <>
+                <Navbar />
+                <PatientShow viewUser={viewUser}/>
+            </>
+        )
+    }
+
     return (
         <>
-            <ProfileDoctor />
+            {(viewUser && viewUser.hasOwnProperty('numberOfBookings')) && (<ProfileDoctor />)}
+            {(viewUser && !viewUser.hasOwnProperty('numberOfBookings')) && (<ProfilePatient />)}
         </>
     );
 }
