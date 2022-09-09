@@ -12,11 +12,15 @@ import PatientProfilePage from "./pages/PatientProfilePage/PatientProfilePage";
 import TodoPage from "./pages/TodoPage/TodoPage";
 import DetailBlog from "./components/blog/DetailBlog";
 import Drugstore from "./pages/drugstore/Drugstore";
+import Checkout from "./pages/Checkout/Checkout";
+import ProductContextProvider from "./pages/drugstore/productContext";
+
 
 function App() {
     const { user } = useContext(AuthContext);
 
     return (
+        <ProductContextProvider>
         <Router>
             <Routes>
                 <Route exact path="/" element={user ? <Home /> : <Login />} />
@@ -47,8 +51,10 @@ function App() {
                 <Route path="/todo" element={<TodoPage />} />
                 <Route path="/detail-blog/:id" element={<DetailBlog />} />
                 <Route path="/drugstore" element={<Drugstore />} />
+                <Route path="/checkout" element={<Checkout/>} />
             </Routes>
         </Router>
+        </ProductContextProvider>    
     );
 }
 
