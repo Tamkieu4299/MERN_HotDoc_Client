@@ -32,7 +32,7 @@ const ChatProvider = ({ children })  => {
         setChats,
       }}
     >
-      {children}
+      { children }
     </ChatContext.Provider>
   );
 };
