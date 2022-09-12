@@ -22,7 +22,7 @@ export default function Navbar() {
             <div className="navCenter">
                 <Link to={"/"}><div className="page">Forum</div></Link>
                 <Link to={"/viewdoctors"}><div className="page">Meet Doctors</div></Link>
-                <div className="page">Messenger</div>
+                <Link to={"/loginchat"}><div className="page">Messenger</div></Link>
                 <Link to={"/drugstore"}><div className="page">Pharmacity</div></Link>
             </div>
             <div className="navRight">
