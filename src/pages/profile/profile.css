@@ -30,6 +30,9 @@
     margin: 3em auto 0em auto;
     border-radius: 40px;
 }
+.top-left--profile-picture:hover {
+    filter: brightness(55%);
+}
 
 .top-left--profile-name {
     font-family: var(--head-font);
@@ -46,6 +49,10 @@
     background-color: var(--global-blue);
     border-radius: 40px;
     margin: 0em auto 3em auto;
+}
+.top-left--book-button:hover {
+    box-shadow: 2px 2px 2px gray;
+    filter: brightness(55%);
 }
 
 .top-left--book-button--text {
@@ -196,6 +203,10 @@
     border-radius: 20px;
     width: 40%;
     margin-top: 2em;
+}
+.bottom-right--container--button:hover {
+    box-shadow: 2px 2px 2px gray;
+    filter: brightness(55%);
 }
 
 .bottom-right--container--button--text {
