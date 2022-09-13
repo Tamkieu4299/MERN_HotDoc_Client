@@ -32,6 +32,7 @@
 }
 .top-left--profile-picture:hover {
     filter: brightness(55%);
+	transition-duration: 0.3s;
 }
 
 .top-left--profile-name {
@@ -53,6 +54,7 @@
 .top-left--book-button:hover {
     box-shadow: 2px 2px 2px gray;
     filter: brightness(55%);
+    transition-duration: 0.3s;
 }
 
 .top-left--book-button--text {
@@ -177,9 +179,7 @@
 }
 
 .bottom-right--container {
-    padding-left: 49px;
-    padding-right: 44px;
-    padding-top: 64px;
+    padding: 3em 2em 3em 2em;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -202,11 +202,12 @@
     background-color: var(--global-blue);
     border-radius: 20px;
     width: 40%;
-    margin-top: 2em;
+    margin: 2em auto 2em auto;
 }
 .bottom-right--container--button:hover {
     box-shadow: 2px 2px 2px gray;
     filter: brightness(55%);
+    transition-duration: 0.3s;
 }
 
 .bottom-right--container--button--text {

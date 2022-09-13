@@ -75,6 +75,7 @@
 }
 .review-box--button:hover {
     filter: brightness(55%);
+	transition-duration: 0.3s;
 }
 
 .shareImgContainer {
