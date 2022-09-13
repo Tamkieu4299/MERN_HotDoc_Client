@@ -12,7 +12,9 @@ code {
     monospace;
 }
 
-/* CLASSES TO BE USED GLOBALLY */
+/* TO BE USED GLOBALLY. DO NOT TOUCH. */
+/* TO BE USED GLOBALLY. DO NOT TOUCH. */
+/* TO BE USED GLOBALLY. DO NOT TOUCH. */
 
 /* SET THE ENTIRE WEBSITE IN THIS BODY FONT */
 * {
@@ -22,3 +24,10 @@ code {
   /* outline: dashed 1px gainsboro; */
 }
 
+/* GLOBAL COLOR VARIABLES */
+:root {
+  --global-gray: #303030;
+  --head-font: "Montserrat", sans-serif;
+  /* --blue: #00b;
+  --fullwidth: 100%; */
+}

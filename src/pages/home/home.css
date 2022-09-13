@@ -28,7 +28,11 @@
     height: 4em;
     border-radius: 40px;
 }
-
+.news-feed--sort-button:hover{
+    filter: brightness(55%);
+    /* box-shadow: 3px 3px 5px gray; */
+    transition-duration: 0.2s;
+}
 .news-feed--sort-button--text {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -37,24 +41,13 @@
     line-height: 38px;
     color: #0e1952;
 }
-
 .news-feed--sort-button.newest {
     background-color: #e6defc;
 }
-.news-feed--sort-button:hover{
-    filter: brightness(55%);
-    /* box-shadow: 3px 3px 5px gray; */
-    transition-duration: 0.4s;
-}
-
 .news-feed--sort-button.most-liked {
     background-color: #25b79d;
 }
-.news-feed--sort-button.most-liked:hover{
-    filter: brightness(55%);
-    /* box-shadow: 3px 3px 5px gray; */
-    transition-duration: 0.4s;
-}
+
 
 .homeBottom {
     display: flex;
