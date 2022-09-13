@@ -7,7 +7,7 @@
     align-items: center;
     /* position: sticky; */
     /* z-index: 999; */
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
 }
 
 .navLeft {
@@ -16,13 +16,18 @@
     padding-left: 104px;
     align-items: center;
 }
+.navLeft:hover{
+    filter: brightness(55%);
+    border-radius: 20px;
+	transition-duration: 0.5s;
+}
 
 .logoText {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
     font-size: 1.5em;
-    color: #0e1952;
+    color: #23A455;
 }
 
 .navCenter {
@@ -33,11 +38,17 @@
 .page {
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-    padding-left: 58px;
-    color: #000000;
+    margin-left: 3em;
+    color: #2d2d2d;
+}
+.page:hover{
+    /* filter: brightness(55%); */
+    background-color: gainsboro;
+    border-radius: 20px;
+	transition-duration: 0.5s;
 }
 
 .navRight {
@@ -54,6 +65,10 @@
     border-radius: 20px;
     margin-left: 2em;
     /* margin-right: 96px; */
+}
+.navBtn:hover{
+    filter: brightness(55%);
+	transition-duration: 0.5s;
 }
 
 .btnText {
@@ -73,6 +88,10 @@
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+}
+.navAvatar:hover{
+    filter: brightness(55%);
+	transition-duration: 0.5s;
 }
 
 .navbar-bvbnd-logo-container{

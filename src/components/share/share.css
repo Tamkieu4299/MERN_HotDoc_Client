@@ -70,7 +70,7 @@
 .news-feed--upload-text:hover{
     filter: brightness(55%);
     /* box-shadow: 3px 3px 3px gray; */
-    transition-duration: 0.1s;
+    transition-duration: 0.4s;
 }
 
 .news-feed--post-button {
@@ -85,7 +85,7 @@
 .news-feed--post-button:hover{
     filter: brightness(55%);
     /* box-shadow: 3px 3px 3px gray; */
-    transition-duration: 0.1s;
+    transition-duration: 0.4s;
 }
 
 .shareImgContainer {
