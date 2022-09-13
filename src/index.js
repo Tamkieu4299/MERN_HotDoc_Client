@@ -18,9 +18,9 @@ root.render(
         <AuthContextProvider>
             <ProductContextProvider>
                 <BrowserRouter>
-                <ChatProvider>
+                {/* <ChatProvider> */}
                     <App />
-                    </ChatProvider>
+                    {/* </ChatProvider> */}
                     </BrowserRouter>
             </ProductContextProvider>
         </AuthContextProvider>
