@@ -68,7 +68,7 @@
     border: none;
     padding: 15px 25px;
     border-radius: 20px;
-    background-color: rgb(57, 159, 57);
+    background-color: var(--global-green);
     margin-right: 1em;
     cursor: pointer;
     color: white;

@@ -1,8 +1,8 @@
-import "./login.css";
 import Navbar from "../../components/navbar/Navbar";
 import { useContext, useRef } from "react";
 import { loginCallCustomer, loginCallDoctor } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
+import "./login.css";
 
 export default function Login() {
     const email = useRef();
@@ -26,52 +26,68 @@ export default function Login() {
     return (
         <>
             <Navbar />
-            <div className="login">
-                <div className="loginTop">
-                    <div className="loginLeft">
-                        <div className="title">
-                            Sign in for further benefits and information.
-                        </div>
-                        <form className="form">
-                            <span className="label">Email</span>
-                            <input
-                                placeholder="youremail@gmail.com"
-                                type="email"
-                                className="input"
-                                ref={email}
-                                required
-                            />
-                            <span className="label">Password</span>
-                            <input
-                                placeholder="******"
-                                type="password"
-                                className="input"
-                                ref={password}
-                                required
-                            />
-                            <div className="choices">
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <div className="login-left--title text-center">Sign In</div>
+                        <form className="mt-3">
+                            <div className="form-group">
+                                <label for="exampleFormControlInput1">
+                                    Email address
+                                </label>
+                                <input
+                                    id="exampleFormControlInput1"
+                                    placeholder="name@example.com"
+                                    type="email"
+                                    className="form-control"
+                                    ref={email}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label
+                                    for="inputPassword"
+                                    className="col-sm-2 col-form-label"
+                                >
+                                    Password
+                                </label>
+                                {/* <div className="col-sm-10"> */}
+                                <input
+                                    placeholder="Password"
+                                    type="password"
+                                    id="inputPassword"
+                                    className="form-control"
+                                    ref={password}
+                                    required
+                                />
+                                {/* </div> */}
+                            </div>
+
+                            <div class="d-flex align-items-center mt-5">
                                 <button
-                                    className="loginButton"
                                     type="submit"
+                                    class="btn btn-primary btn-lg col"
                                     onClick={handleClickCustomer}
                                 >
-                                    <span className="loginText">Customer</span>
+                                    Sign In as Patient
                                 </button>
+                                
+                                <div className="col text-center h3">OR</div>
+                                
                                 <button
-                                    className="loginButton"
                                     type="submit"
+                                    className="btn btn-primary btn-lg col"
                                     onClick={handleClickDoctor}
                                 >
-                                    <span className="loginText">Doctor</span>
+                                    Sign In as Doctor
                                 </button>
                             </div>
                         </form>
                     </div>
-                    <div className="loginRight">
+                    <div className="col">
                         <div className="background"></div>
                     </div>
                 </div>
-                <div className="loginBottom"></div>
             </div>
         </>
     );
