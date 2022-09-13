@@ -96,7 +96,7 @@ export default function Profile() {
                             </div>
                             <Link to={`/calendar/${username}`} >
                             <button className="top-left--book-button">
-                                <span className="top-left--book-button--text">Book now</span>
+                                <span className="top-left--book-button--text">Book an Appointment</span>
                             </button>
                             </Link>
                         </div>

@@ -45,7 +45,7 @@
 }
 
 .top-left--book-button {
-    width: 10em;
+    width: 17em;
     height: 3em;
     background-color: var(--global-blue);
     border-radius: 40px;
@@ -61,7 +61,7 @@
 
     color: #fff;
     font-family: var(--head-font);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.2em;
 
     /* width: 99px;
@@ -212,7 +212,7 @@
 
 .bottom-right--container--button--text {
     font-family: var(--head-font);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.2em;
     line-height: 2.5em;
     color: #fff;

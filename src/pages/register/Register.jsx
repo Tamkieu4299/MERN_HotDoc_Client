@@ -123,11 +123,11 @@ export default function Register() {
                                     for="password"
                                     className="col-sm-12 col-form-label"
                                 >
-                                    Password
+                                    Password (Repeat)
                                 </label>
                                 {/* <div className="col-sm-10"> */}
                                 <input
-                                    placeholder="Password"
+                                    placeholder="Password (Repeat)"
                                     type="password"
                                     id="password"
                                     className="form-control"

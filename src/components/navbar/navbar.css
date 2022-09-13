@@ -60,8 +60,8 @@
 
 .navBtn {
     width: 8em; 
-    height: 2em;
-    background: #0e1952;
+    height: 2.5em;
+    background: var(--global-blue);
     border-radius: 20px;
     margin-left: 2em;
     /* margin-right: 96px; */
