@@ -67,17 +67,11 @@ export default function Home() {
             <Navbar />
             <div className="homeWrapper">
                 <div className="homeTop">
-                    <button className="filterBtn daily">
-                        <span className="filterBtnText">Daily</span>
+                    <button className="news-feed--sort-button newest">
+                        <span className="news-feed--sort-button--text">Newest</span>
                     </button>
-                    <button className="filterBtn tips">
-                        <span className="filterBtnText">Tips</span>
-                    </button>
-                    <button className="filterBtn facts">
-                        <span className="filterBtnText">Facts</span>
-                    </button>
-                    <button className="filterBtn rec">
-                        <span className="filterBtnText">Recommend</span>
+                    <button className="news-feed--sort-button most-liked">
+                        <span className="news-feed--sort-button--text">Most liked</span>
                     </button>
                 </div>
                 <div className="homeMiddle">
@@ -97,8 +91,8 @@ export default function Home() {
                                 className="adImg"
                             />
                         </div>
-                        <div className="ranking">
-                            <div className="rankTitle">Best Doctors</div>
+                        <div className="news-feed--doctor-ranking-container">
+                            <div className="news-feed--doctor-ranking-text">Best Doctors</div>
                             <Ranking allDoctors={allDoctors} />
                         </div>
                     </div>

@@ -21,16 +21,16 @@
     margin-left: 94px;
 }
 
-.filterBtn {
-    margin-top: 80px;
-    margin-right: 64px;
-    width: 197px;
-    height: 68px;
+.news-feed--sort-button {
+    margin-top: 3em;
+    margin-right: 2em;
+    width: 12em;
+    height: 4em;
     border-radius: 40px;
 }
 
-.filterBtnText {
-    font-family: "Acephimere";
+.news-feed--sort-button--text {
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
@@ -38,20 +38,22 @@
     color: #0e1952;
 }
 
-.filterBtn.daily {
+.news-feed--sort-button.newest {
     background-color: #e6defc;
 }
-
-.filterBtn.tips {
-    background-color: #ffdeb7;
+.news-feed--sort-button:hover{
+    filter: brightness(55%);
+    /* box-shadow: 3px 3px 5px gray; */
+    transition-duration: 0.2s;
 }
 
-.filterBtn.facts {
+.news-feed--sort-button.most-liked {
     background-color: #25b79d;
 }
-
-.filterBtn.rec {
-    background-color: #ffbb6d;
+.news-feed--sort-button.most-liked:hover{
+    filter: brightness(55%);
+    /* box-shadow: 3px 3px 5px gray; */
+    transition-duration: 0.2s;
 }
 
 .homeBottom {
@@ -79,23 +81,29 @@
     border-radius: 16px;
 }
 
-.ranking {
+.news-feed--doctor-ranking-container {
     width: 80%;
     margin-top: 55px;
     margin-left: 50px;
     background: #FFFFFF;
     box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.12);
     border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
-.rankTitle{
-    margin-left: 162px;
-    font-family: 'Acephimere';
+.news-feed--doctor-ranking-text{
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
+
+
     font-size: 36px;
     line-height: 43px;
-    color: #000000;
-    opacity: 0.6;
-    padding-top:34px;
+    color: dimgray;
 } 

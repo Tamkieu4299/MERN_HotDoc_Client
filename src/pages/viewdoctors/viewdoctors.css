@@ -29,14 +29,14 @@
     border-radius: 40px;
 }
 
-.filterBtnText {
-    font-family: "Acephimere";
+/* .filterBtnText {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
     line-height: 38px;
     color: #0e1952;
-}
+} */
 
 .filterBtn.daily {
     background-color: #e6defc;

@@ -25,7 +25,7 @@ export default function Viewdoctors() {
         <>
             <Navbar />
             <div className="viewWrapper">
-                <div className="viewTop">
+                {/* <div className="viewTop">
                     <button className="filterBtn daily">
                         <span className="filterBtnText">Daily</span>
                     </button>
@@ -38,7 +38,7 @@ export default function Viewdoctors() {
                     <button className="filterBtn rec">
                         <span className="filterBtnText">Recommend</span>
                     </button>
-                </div>
+                </div> */}
                 <div className="viewMiddle">
                     {/* <Share /> */}
                 </div>

@@ -12,7 +12,9 @@ code {
     monospace;
 }
 
-/* SET THE ENTIRE WEBSITE IN THIS FONT */
+/* CLASSES TO BE USED GLOBALLY */
+
+/* SET THE ENTIRE WEBSITE IN THIS BODY FONT */
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;

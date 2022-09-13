@@ -19,9 +19,7 @@ export default function Ranking({ allDoctors }) {
                     <div className="rankChart">
                         {sortedDoctor.map((doc) => (
                             <div className="rankRow">
-                                <span className="rankPosition">
-                                    {position++}
-                                </span>
+                                <span className="rankPosition">{position++}</span>
                                 <img
                                     src={
                                         doc?.profilePicture
