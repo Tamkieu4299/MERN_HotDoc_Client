@@ -63,15 +63,18 @@
     font-weight: 500;
 }
 
-.shareButton {
+
+.review-box--button {
     border: none;
-    padding: 7px;
-    border-radius: 5px;
-    background-color: green;
-    font-weight: 500;
-    margin-right: 20px;
+    padding: 15px 25px;
+    border-radius: 20px;
+    background-color: rgb(57, 159, 57);
+    margin-right: 1em;
     cursor: pointer;
     color: white;
+}
+.review-box--button:hover {
+    filter: brightness(55%);
 }
 
 .shareImgContainer {
