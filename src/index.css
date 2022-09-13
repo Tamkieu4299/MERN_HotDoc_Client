@@ -27,6 +27,7 @@ code {
 /* GLOBAL COLOR VARIABLES */
 :root {
   --global-gray: #303030;
+  --global-blue: #4054B2;
   --head-font: "Montserrat", sans-serif;
   /* --blue: #00b;
   --fullwidth: 100%; */

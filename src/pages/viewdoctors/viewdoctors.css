@@ -29,7 +29,7 @@
     padding: 0 2em;
     height: 4em;
     border-radius: 40px;
-    background-color: #4054B2;
+    background-color: var(--global-blue);
 }
 .view-doctors--sort-button:hover{
     filter: brightness(55%);
