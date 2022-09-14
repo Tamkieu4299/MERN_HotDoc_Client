@@ -14,11 +14,15 @@ export default function Navbar() {
     };
 
     return (
-        <div className="navbarWrapper">
-            <div className="navLeft">
-                <div className="logoText">HOTDOC</div>
-                <div className="logoShape"></div>
-            </div>
+        <div className="navbarWrapper sticky-top" id="navbar">
+            <Link to={"/"}>
+                <div className="navLeft">
+                    <div className="navbar-bvbnd-logo-container">
+                        <img src="https://www.bvbnd.vn/wp-content/uploads/2020/08/LogoBVBND.png" alt="bvbnd-logo" />
+                    </div>
+                    <div className="logoText">BỆNH VIỆN BỆNH NHIỆT ĐỚI</div>
+                </div>
+            </Link>
             <div className="navCenter">
                 <Link to={"/"}><div className="page">Forum</div></Link>
                 <Link to={"/viewdoctors"}><div className="page">Meet Doctors</div></Link>
@@ -41,11 +45,11 @@ export default function Navbar() {
                 )}
                 {!user ? (
                     <button className="navBtn">
-                        <span className="btnText">Sign in</span>
+                        <span className="btnText">Sign In</span>
                     </button>
                 ) : (
                     <button className="navBtn" onClick={handleLogout}>
-                        <span className="btnText">Log out</span>
+                        <span className="btnText">Logout</span>
                     </button>
                 )}
             </div>

@@ -83,8 +83,8 @@ export default function Share() {
                                 htmlColor="tomato"
                                 className="shareIcon"
                             /> */}
-                            <span className="shareOptionText">
-                                Photo or Video
+                            <span className="news-feed--upload-text">
+                                Photo/Video
                             </span>
                             <input
                                 style={{ display: "none" }}
@@ -96,22 +96,22 @@ export default function Share() {
                         </label>
                         {/* <div className="shareOption">
                             <Label htmlColor="blue" className="shareIcon" />
-                            <span className="shareOptionText">Tag</span>
+                            <span className="news-feed--upload-text">Tag</span>
                         </div>
                         <div className="shareOption">
                             <Room htmlColor="green" className="shareIcon" />
-                            <span className="shareOptionText">Location</span>
+                            <span className="news-feed--upload-text">Location</span>
                         </div>
                         <div className="shareOption">
                             <EmojiEmotions
                                 htmlColor="goldenrod"
                                 className="shareIcon"
                             />
-                            <span className="shareOptionText">Feelings</span>
+                            <span className="news-feed--upload-text">Feelings</span>
                         </div> */}
                     </div>
-                    <button className="shareButton" type="submit">
-                        Share
+                    <button className="news-feed--post-button" type="submit">
+                        Post
                     </button>
                 </form>
             </div>
