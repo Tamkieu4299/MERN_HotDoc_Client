@@ -3,6 +3,7 @@ import Home from "../src/pages/home/Home";
 import Register from "../src/pages/register/Register";
 import Profile from "../src/pages/profile/Profile";
 import Viewdoctors from "./pages/viewdoctors/Viewdoctors";
+import Viewusers from "./pages/viewdoctors/Viewusers";
 import Calendar from "./pages/calendar/Calendar";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
@@ -37,7 +38,7 @@ function App() {
                         />
                         <Route
                             path="/viewdoctors"
-                            element={!user ? <Navigate to="/" /> : <Viewdoctors />}
+                            element={!user ? <Navigate to="/" /> : (user.hasOwnProperty('numberOfBookings') ? <Viewusers /> : <Viewdoctors />)}
                         />
                         <Route
                             path="/profile/:username"

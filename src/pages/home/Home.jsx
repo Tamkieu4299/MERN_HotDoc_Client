@@ -9,42 +9,30 @@ import Share from "../../components/share/Share";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-// import Blog from "../../components/blog/Blog";
-// const fakeDataBlog = [
-//     {
-//         id: 1,
-//         name: 'Có bầu 4 tháng có quan hệ được không',
-//         des: 'Có bầu 4 tháng quan hệ được không? Chắc hẳn đây là mối băn khoăn của hầu hết các cặp vợ chồng. Liệu khi quan hệ có ảnh hưởng gì đến em bé trong bụng không?',
-//         star: 5,
-//         img: 'https://www.fvhospital.com/wp-content/uploads/2018/03/dr-vo-trieu-dat-2020.jpg',
-//         author: 'Quan',
-//         time: '20/8/2022'
-//     },
-//     {
-//         id: 2,
-//         name: 'Đau rát tầng sinh môn khi quan hệ là bệnh gì ?',
-//         des: 'Có rất nhiều nguyên nhân gây đau rát tầng sinh môn khi quan hệ, đây là vùng nhạy cảm dễ bị tổn thương của phụ nữ. Tình trạng này có thể bị gây ra bởi tình trạng nhiễm trùng vùng kín, hoặc có thể là do một số loại bệnh lây truyền qua đường tình dục.',
-//         star: 4 ,
-//         img: 'https://www.fvhospital.com/wp-content/uploads/2018/03/dr-vo-trieu-dat-2020.jpg',
-//         author: 'Tam',
-//         time: '10/8/2022'
-//     },
-//     {
-//         id: 3,
-//         name: 'Uống thuốc tránh thai hàng ngày có thai không?',
-//         des: 'Uống thuốc tránh thai hàng ngày là một trong những lựa chọn được các cặp đôi dùng khi muốn ngừa thai hiệu quả, Tuy nhiên, bên cạnh lợi ích của thuốc mang lại thì vẫn còn không ít những băn khoăn, thắc mắc của chị em khi dùng thuốc, trong đó câu hỏi được thắc mắc nhiều nhất là ” Uống thuốc tránh thai hàng ngày có thai không?',
-//         star: 2,
-//         img: 'https://www.fvhospital.com/wp-content/uploads/2018/03/dr-vo-trieu-dat-2020.jpg',
-//         author: 'Phuong',
-//         time: '01/07/2019'
-//     },
-// ]
 
 export default function Home() {
     const { user } = useContext(AuthContext);
     const [allDoctors, setAllDoctors] = useState([]);
     const [posts, setPosts] = useState([]);
+    const [text, setText] = useState("");
+    const [users, setUsers] = useState([]);
+    const [allUsers, setAllUsers] = useState([]);
+    const input = useRef();
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+    const onChange = (e) => {
+        e.preventDefault();
+        setText(e.target.value);
+    };
+
+    useEffect(() => {
+        users.length = 0;
+        const getUsers = async () => {
+            const res = await axios.get(`/customers?customername=${text}`);
+            setUsers([...users, res.data]);
+        };
+        getUsers();
+    }, [text]);
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -66,13 +54,50 @@ export default function Home() {
         <>
             <Navbar />
             <div className="homeWrapper">
-                <div className="homeTop">
+                {/* <div className="homeTop">
                     <button className="news-feed--sort-button newest">
                         <span className="news-feed--sort-button--text">Newest</span>
                     </button>
                     <button className="news-feed--sort-button most-liked">
                         <span className="news-feed--sort-button--text">Most liked</span>
                     </button>
+                </div> */}
+                <div className="homeTop">
+                    <div className="searchbar">
+                        <input
+                            placeholder="Search for users"
+                            className="searchInput"
+                            onChange={onChange}
+                            ref={input}
+                        />
+                    </div>
+                    {users.length !== 0 && (
+                        <div className="searchResults">
+                            {users.map((u) => (
+                                <Link
+                                    to={`/profile/${u.username}`}
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "black",
+                                    }}
+                                >
+                                    <div className="result">
+                                        <img
+                                            className="resultImg"
+                                            src={u.profilePicture}
+                                            alt=""
+                                        />
+                                        <span className="resultUsername">
+                                            {u.username}
+                                        </span>
+                                        <span className="resultUsername">
+                                            {u.email}
+                                        </span>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    )}
                 </div>
                 <div className="homeMiddle">
                     <Share />
@@ -86,13 +111,15 @@ export default function Home() {
                     <div className="homeRight">
                         <div className="adBanner">
                             <img
-                                src={PF + "system/ads.jpg"}
+                                src="https://www.bvbnd.vn/wp-content/uploads/2020/07/IMG_7355-scaled.jpg"
                                 alt=""
                                 className="adImg"
                             />
                         </div>
                         <div className="news-feed--doctor-ranking-container">
-                            <div className="news-feed--doctor-ranking-text">Best Doctors</div>
+                            <div className="news-feed--doctor-ranking-text">
+                                Best Doctors
+                            </div>
                             <Ranking allDoctors={allDoctors} />
                         </div>
                     </div>

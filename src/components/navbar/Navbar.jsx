@@ -25,8 +25,8 @@ export default function Navbar() {
             </Link>
             <div className="navCenter">
                 <Link to={"/"}><div className="page">News Feed</div></Link>
-                <Link to={"/viewdoctors"}><div className="page">Find a Doctor</div></Link>
-                <a href="http://localhost:3000/chats" className="page">Consult Online</a>
+                <Link to={"/viewdoctors"}><div className="page">{}Find</div></Link>
+                <a href="https://bvbnd-messenger.herokuapp.com/" className="page">Consult Online</a>
                 <Link to={"/drugstore"}><div className="page">Store</div></Link>
             </div>
             <div className="navRight">
@@ -35,8 +35,6 @@ export default function Navbar() {
                         <img
                             src={
                                 user?.profilePicture
-                                    // ? PF + user.profilePicture
-                                    // : PF + "person/noAvatar.png"
                             }
                             alt=""
                             className="navAvatar"

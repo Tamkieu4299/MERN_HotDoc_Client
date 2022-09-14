@@ -8,19 +8,35 @@ import Share from "../../components/share/Share";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default function Viewdoctors() {
+export default function Viewusers() {
     const { user } = useContext(AuthContext);
+    const [allCus, setAllCus] = useState([]);
     const [allDoctors, setAllDoctors] = useState([]);
+    const [allApps, setAllApps] = useState([]);
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
+    useEffect(() => {
+        const fetchApps = async () => {
+            const res = await axios.get(`/appointments/${user._id}`);
+            setAllApps(res.data);
+        };
+        fetchApps();
+    }, [user._id]);
 
     useEffect(() => {
         const fetchUser = async () => {
-            const res = await axios.get("/doctors/all/");
-            setAllDoctors(res.data);
+            const res = await axios.get("/customers/all/");
+            const arr = [];
+            for(const app of allApps){
+                for(const cus of res.data){
+                    if(app.customerId===cus._id && !arr.includes(cus)) arr.push(cus);
+                }
+            }
+            setAllCus(arr);
+        
         };
         fetchUser();
-    }, [user._id]);
+    }, [allApps]);
 
     return (
         <>
@@ -52,11 +68,11 @@ export default function Viewdoctors() {
                 
                 <div className="viewBottom">
                     <div className="viewLeft">
-                        {allDoctors.length
-                            ? allDoctors.map((doc) => (
-                                  <UserCard user={doc} key={doc._id} />
+                        {allCus.length
+                            ? allCus.map((cus) => (
+                                  <UserCard user={cus} key={cus._id} />
                               ))
-                            : "No Doctors"}
+                            : "No Customers"}
                     </div>
                     <div className="viewRight">
                         <div className="adBanner">
