@@ -36,7 +36,7 @@
 }
 
 .top-left--profile-name {
-    font-family: var(--head-font);
+    font-family: var(--global-head);
     font-weight: 700;
     font-size: 2em;
     color: var(--global-gray);
@@ -60,7 +60,7 @@
 .top-left--book-button--text {
 
     color: #fff;
-    font-family: var(--head-font);
+    font-family: var(--global-head);
     font-weight: 400;
     font-size: 1.2em;
 
@@ -136,7 +136,7 @@
 
 .bottom-left--container--title {
 
-    font-family: var(--head-font);
+    font-family: var(--global-head);
     font-weight: 700;
     font-size: 3em;
     color: var(--global-gray);
@@ -187,7 +187,7 @@
 }
 
 .bottom-right--container--title {
-    font-family: var(--head-font);
+    font-family: var(--global-head);
     font-weight: 700;
     font-size: 3em;
     color: var(--global-gray);
@@ -211,7 +211,7 @@
 }
 
 .bottom-right--container--button--text {
-    font-family: var(--head-font);
+    font-family: var(--global-head);
     font-weight: 400;
     font-size: 1.2em;
     line-height: 2.5em;

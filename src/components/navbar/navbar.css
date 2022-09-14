@@ -36,7 +36,7 @@
 }
 
 .page {
-    font-family: "Montserrat";
+    font-family: var(--global-head);
     font-style: normal;
     font-weight: 700;
     font-size: 24px;

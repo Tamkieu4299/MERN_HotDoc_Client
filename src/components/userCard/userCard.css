@@ -31,7 +31,7 @@
 }
 
 .card-right--name {
-    font-family: var(--head-font);
+    font-family: var(--global-head);
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -47,7 +47,7 @@
 .card-right--info--email {
     flex: 1;
     margin-right: 16px;
-    font-family: var(--head-font);
+    font-family: var(--global-head);
     font-weight: 400;
 
     font-size: 20px;

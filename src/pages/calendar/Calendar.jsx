@@ -187,20 +187,21 @@ export default function Calendar() {
                 <div className="header">
                     <button
                         type="button"
-                        className="nav nav--prev"
+                        className="header--button"
                         onClick={handlePrev}
                     >
-                        Back
+                        Previous Month
                     </button>
-                    <div className="datetime">
+                    <span className="header--selected-title">Selected Time</span>
+                    <div className="header--selected-time">
                         {dayObj.format("MMM DD YYYY HH:mm")}
                     </div>
                     <button
                         type="button"
-                        className="nav nav--prev"
+                        className="header--button"
                         onClick={handleNext}
                     >
-                        Next
+                        Next Month
                     </button>
                 </div>
                 <div className="calendar">
@@ -267,9 +268,9 @@ export default function Calendar() {
                             );
                     })}
                 </div>
-                <div className="bookNowContain">
-                    <button className="bookNowBtn" onClick={handleBooking}>
-                        <span className="bookNowText">Book now</span>
+                <div className="bottom-container">
+                    <button className="bottom-container--button" onClick={handleBooking}>
+                        <span className="bottom-container--button--text">Book an Appointment</span>
                     </button>
                 </div>
             </div>

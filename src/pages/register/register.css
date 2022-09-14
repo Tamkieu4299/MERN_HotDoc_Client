@@ -1,6 +1,6 @@
 /* LEFT -------------------------------------------------------------------------------------------------- */
 .register-left--title {
-    font-family: var(--head-font);
+    font-family: var(--global-head);
     font-weight: 700;
     font-size: 5em;
     color: var(--global-blue);
