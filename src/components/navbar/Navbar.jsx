@@ -24,10 +24,10 @@ export default function Navbar() {
                 </div>
             </Link>
             <div className="navCenter">
-                <Link to={"/"}><div className="page">Forum</div></Link>
-                <Link to={"/viewdoctors"}><div className="page">Meet Doctors</div></Link>
-            <a href="http://localhost:3000/chats" className="page">Messenger</a>
-                <Link to={"/drugstore"}><div className="page">Pharmacity</div></Link>
+                <Link to={"/"}><div className="page">News Feed</div></Link>
+                <Link to={"/viewdoctors"}><div className="page">Find a Doctor</div></Link>
+                <a href="http://localhost:3000/chats" className="page">Consult Online</a>
+                <Link to={"/drugstore"}><div className="page">Store</div></Link>
             </div>
             <div className="navRight">
                 {user && (

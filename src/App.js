@@ -54,8 +54,8 @@ function App() {
                         <Route path="/detail-blog/:id" element={<DetailBlog />} />
                         <Route path="/drugstore" element={<Drugstore />} />
                         <Route path="/checkout" element={<Checkout />} />
-                        <Route path='/loginchat' element={<Homepage />} exact/>
-                        <Route path='/chats' element={<Chatpage />} /> 
+                        {/* <Route path='/loginchat' element={<Homepage />} exact/>
+                        <Route path='/chats' element={<Chatpage />} />  */}
                     </Routes>
 
    
