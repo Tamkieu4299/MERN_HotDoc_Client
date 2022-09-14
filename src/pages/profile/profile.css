@@ -95,13 +95,13 @@
 }
 
 .cardTitle {
-    font-family: "Acephimere";
+    font-family: var(--global-head);
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     margin-left: 24px;
     line-height: 29px;
-    color: #0e1952;
+    color: var(--global-gray)
 }
 
 

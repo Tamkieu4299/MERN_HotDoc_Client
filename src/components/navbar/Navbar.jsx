@@ -49,7 +49,7 @@ export default function Navbar() {
                     </button>
                 ) : (
                     <button className="navBtn" onClick={handleLogout}>
-                        <span className="btnText">Logout</span>
+                        <span className="btnText">Sign Out</span>
                     </button>
                 )}
             </div>
