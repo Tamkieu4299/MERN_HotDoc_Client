@@ -36,8 +36,8 @@ export default function Login() {
                                     Email address
                                 </label>
                                 <div className="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">@</div>
+                                    <div className="input-group-prepend">
+                                        <div className="input-group-text">@</div>
                                     </div>
                                     <input
                                         id="exampleFormControlInput1"
@@ -68,10 +68,10 @@ export default function Login() {
                                 {/* </div> */}
                             </div>
 
-                            <div class="d-flex align-items-center mt-5">
+                            <div className="d-flex align-items-center mt-5">
                                 <button
                                     type="submit"
-                                    class="btn btn-primary btn-lg col"
+                                    className="btn btn-primary btn-lg col"
                                     onClick={handleClickCustomer}
                                 >
                                     Sign In as Patient

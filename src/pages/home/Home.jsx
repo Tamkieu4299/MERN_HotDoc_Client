@@ -9,7 +9,6 @@ import Share from "../../components/share/Share";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
 export default function Home() {
     const { user } = useContext(AuthContext);
     const [allDoctors, setAllDoctors] = useState([]);

@@ -42,7 +42,7 @@
     font-weight: 400;
     font-size: 26px;
     line-height: 38px;
-    color: #0e1952;
+    color: var(--global-gray);
 }
 .news-feed--sort-button.newest {
     background-color: #e6defc;

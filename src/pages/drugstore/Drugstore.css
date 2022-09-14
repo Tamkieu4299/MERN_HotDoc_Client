@@ -1,65 +1,54 @@
-.drugList {
-    margin: 50px !important;
-    display: flex !important;
-    justify-content: space-around !important;
-    gap :150px !important;
+.store--container{
+    height: auto;
+    width: 18em!important; /* DO NOT REMOVE */
 }
 
-.cardTitle {
-    margin-left: 0px !important;
-    /* font-size: 1.2rem; */
+.store--image{
+    object-fit: cover;
 }
 
-/* image */
-.drugImage {
-    background-image: url("../../../public/assets/imgs/drugstore/drug.jpg");
-    background-size: cover !important;
-    height: 200px !important;
-    width: 100% !important;
-    margin-bottom: 15% !important;
+/* ON HOVER */
+.store--container:hover{
+    transform: scale(1.02);
+    filter: brightness(80%);
+    outline: 2px solid var(--global-green);
+
+    transition-duration: 0.1s;
+}
+/* WHEN MOUSE NOT HOVER (OPPOSITE OF HOVER) */
+.store--container:not(:hover){
+    transition-duration: 0.1s;
 }
 
-/* Filter CSS */
-.col-filter {
-    margin-top: 0.5% !important;
+.store--description--container{
+    height: 7em;
 }
 
-/* Drug Item CSS */
-.col-item {
-    text-align: center !important;
-    text: #000000 !important;
+.store--description--container--text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.store--add-to-cart{
+    display: flex!important;
+    flex-direction: row!important;
+    align-items: center!important;
+    justify-content: space-between;
 }
 
-.productWrapper > .container {
-    margin: 0px 50px !important;
+/* ON HOVER */
+.store--see-cart-button:hover{
+    /* transform: scale(1.00); */
+    filter: brightness(80%);
+    transition: all 0.4s ease-in-out; 
+}
+/* WHEN MOUSE NOT HOVER (OPPOSITE OF HOVER) */
+.store--see-cart-button:not(:hover){
+    transition: all 0.4s ease-in-out; 
 }
 
-.productItem {
-    text-align: center !important;
-    margin-top: 10% !important;
-    border-radius: 5% !important; 
-        /* margin-left: 20%;  */
+.store--image{
+    border-radius: 10px;
 }
-
-.productItem > .card-body {
-    padding: 0px !important;
-    font-family: 'Acephimere';
-}
-
-.infoBtn {
-    margin-top: 2% !important;
-    background-color: #B494FF !important;
-    width: 197px !important;
-    height: 68px !important;
-    border-radius: 40px !important;
-}
-
-.buyBtn {
-    /* margin-top: 8%; */
-    background-color: #FFBB6D !important;
-    width: 197px !important;
-    height: 68px !important;
-    border-radius: 40px !important;
-}
-
-

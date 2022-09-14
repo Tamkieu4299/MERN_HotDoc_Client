@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext, useEffect, useRef, useState } from "react";
 import axios from "axios";
+import {FiExternalLink} from "react-icons/fi";
 
 export default function Navbar() {
     const { user } = useContext(AuthContext);
@@ -47,7 +48,7 @@ export default function Navbar() {
                     </button>
                 ) : (
                     <button className="navBtn" onClick={handleLogout}>
-                        <span className="btnText">Logout</span>
+                        <span className="btnText">Sign Out</span>
                     </button>
                 )}
             </div>

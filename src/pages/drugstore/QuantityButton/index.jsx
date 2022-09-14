@@ -1,25 +1,21 @@
-import React, { useContext } from 'react';
-import { Button, Card, ThemeProvider, Container, Row, Col } from "react-bootstrap";
-import { ProductContext } from '../productContext';
-import { Cart2, Cart3 } from 'react-bootstrap-icons';
+import React, { useContext } from "react";
+import { ProductContext } from "../productContext";
 import "../Drugstore.css";
-import { useNavigate } from 'react-router-dom';
+import {BsCartPlus} from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const QuantityButton = () => {
     const { products } = useContext(ProductContext);
     const navigate = useNavigate();
     const productsQuantity = products.length;
-    return (
-             <Button
-                size='sm'
-                variant='outline'
-                style={{ width: 60, display: 'flex', justifyContent: 'space-between' }}
-                onClick={() => navigate('/checkout')}
-            >   
-                <Cart3 size={20} color='coral' />
-                <strong style={{ color: 'coral' }}>{productsQuantity}</strong>
 
-            </Button>
+    return (
+        <>
+            <div className="btn btn-lg btn-success d-flex justify-content-center align-items-center store--see-cart-button" onClick={() => navigate("/checkout")}>
+                <BsCartPlus/>
+                <span>&nbsp;Cart: {productsQuantity} Items</span>
+            </div>
+        </>
     );
 };
 export default QuantityButton;
