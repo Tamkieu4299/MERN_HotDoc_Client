@@ -26,7 +26,7 @@ export default function Navbar() {
             <div className="navCenter">
                 <Link to={"/"}><div className="page">News Feed</div></Link>
                 <Link to={"/viewdoctors"}><div className="page">Find a Doctor</div></Link>
-                <a href="http://localhost:3000/chats" className="page">Consult Online</a>
+                <a href="https://bvbnd-messenger.herokuapp.com/" className="page">Consult Online</a>
                 <Link to={"/drugstore"}><div className="page">Store</div></Link>
             </div>
             <div className="navRight">
