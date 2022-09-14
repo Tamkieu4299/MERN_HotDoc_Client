@@ -9,7 +9,7 @@
 
 /* ON HOVER */
 .store--container:hover{
-    /* transform: scale(1.00); */
+    transform: scale(1.02);
     filter: brightness(80%);
     outline: 2px solid var(--global-green);
 
