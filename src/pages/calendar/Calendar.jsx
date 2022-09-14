@@ -5,6 +5,8 @@ import range from "lodash-es/range";
 import "./calendar.css";
 import Navbar from "../../components/navbar/Navbar"; import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
+import { BsCaretLeftSquareFill, BsCaretRightSquareFill } from 'react-icons/bs';
+import { BsCalendar3Event } from "react-icons/bs";
 const toArray = require("dayjs/plugin/toArray");
 dayjs.extend(toArray);
 
@@ -185,12 +187,14 @@ export default function Calendar() {
             <Navbar />
             <div className="calendarWrapper">
                 <div className="header">
+                
                     <button
                         type="button"
                         className="header--button"
                         onClick={handlePrev}
                     >
-                        Previous Month
+                        <BsCaretLeftSquareFill/>
+                         Previous Month
                     </button>
                     <span className="header--selected-title">Selected Time</span>
                     <div className="header--selected-time">
@@ -202,6 +206,7 @@ export default function Calendar() {
                         onClick={handleNext}
                     >
                         Next Month
+                        <BsCaretRightSquareFill/>
                     </button>
                 </div>
                 <div className="calendar">
@@ -270,7 +275,7 @@ export default function Calendar() {
                 </div>
                 <div className="bottom-container">
                     <button className="bottom-container--button" onClick={handleBooking}>
-                        <span className="bottom-container--button--text">Book an Appointment</span>
+                        <span className="bottom-container--button--text">Book an Appointment<BsCalendar3Event/></span>
                     </button>
                 </div>
             </div>

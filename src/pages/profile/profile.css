@@ -45,14 +45,12 @@
 }
 
 .top-left--book-button {
-    width: 17em;
-    height: 3em;
+    padding: 0.5em 1em;
     background-color: var(--global-blue);
     border-radius: 40px;
     margin: 0em auto 3em auto;
 }
 .top-left--book-button:hover {
-    box-shadow: 2px 2px 2px gray;
     filter: brightness(55%);
     transition-duration: 0.3s;
 }
@@ -68,6 +66,11 @@
     height: 26px;
     line-height: 26px;
     color: #ffffff; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
 }
 
 /* 1.2. TOP RIGHT ---------------------------------------------------------- */
@@ -201,11 +204,10 @@
     flex: 1;
     background-color: var(--global-blue);
     border-radius: 20px;
-    width: 40%;
     margin: 2em auto 2em auto;
+    padding: 0.5em 1em;
 }
 .bottom-right--container--button:hover {
-    box-shadow: 2px 2px 2px gray;
     filter: brightness(55%);
     transition-duration: 0.3s;
 }
@@ -214,8 +216,11 @@
     font-family: var(--global-head);
     font-weight: 400;
     font-size: 1.2em;
-    line-height: 2.5em;
     color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .bottom-right--container--button--carousel {

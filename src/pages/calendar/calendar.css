@@ -27,12 +27,17 @@
 }
 
 .header--button {
-    width: 9em;
+    width: auto;
     height: auto;
     background-color: var(--global-blue);
     color: #fff;
     border-radius: 40px;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1em;
 }
 .header--button:hover{
     transition-duration: 0.2s;
@@ -136,7 +141,7 @@
 }
 
 .bottom-container--button{
-    width: 30em;
+    width: auto;
     background-color: var(--global-blue);
     margin: 0 auto;
     border-radius: 20px;
@@ -150,4 +155,9 @@
     font-family: var(--global-head);
     font-size: 35px;
     color: #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1em;
 }

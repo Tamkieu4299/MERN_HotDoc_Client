@@ -35,14 +35,19 @@ export default function Login() {
                                 <label for="exampleFormControlInput1">
                                     Email address
                                 </label>
-                                <input
-                                    id="exampleFormControlInput1"
-                                    placeholder="name@example.com"
-                                    type="email"
-                                    className="form-control"
-                                    ref={email}
-                                    required
-                                />
+                                <div className="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">@</div>
+                                    </div>
+                                    <input
+                                        id="exampleFormControlInput1"
+                                        placeholder="name@example.com"
+                                        type="email"
+                                        className="form-control"
+                                        ref={email}
+                                        required
+                                        />
+                                </div>
                             </div>
                             <div className="form-group">
                                 <label
@@ -81,6 +86,12 @@ export default function Login() {
                                 >
                                     Sign In as Doctor
                                 </button>
+                            </div>
+
+                            <hr className="my-5"/>
+
+                            <div>
+                                <span>Sign Up Button</span>
                             </div>
                         </form>
                     </div>
