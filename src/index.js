@@ -6,25 +6,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import ProductContextProvider from "./pages/drugstore/productContext";
-
 import { ChakraProvider } from "@chakra-ui/react";
-// import ChatProvider from "./pages/chat/ChatProvider";
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <ChakraProvider>
-        
         <AuthContextProvider>
             <ProductContextProvider>
                 <BrowserRouter>
-                {/* <ChatProvider> */}
                     <App />
-                    {/* </ChatProvider> */}
-                    </BrowserRouter>
+                </BrowserRouter>
             </ProductContextProvider>
         </AuthContextProvider>
-        
     </ChakraProvider>
 );
 

@@ -13,11 +13,7 @@ import DetailBlog from "./components/blog/DetailBlog";
 import Drugstore from "./pages/drugstore/Drugstore";
 import Checkout from "./pages/Checkout/Checkout";
 import ProductContextProvider from "./pages/drugstore/productContext";
-import './App.css';
-import Homepage from "./pages/chat/Homepage";
-import Chatpage from "./pages/chat/Chatpage";
-import { ChakraProvider } from "@chakra-ui/react";
-import ChatProvider from "./pages/chat/ChatProvider";
+
 
 function App() {
     const { user } = useContext(AuthContext);
@@ -54,8 +50,6 @@ function App() {
                         <Route path="/detail-blog/:id" element={<DetailBlog />} />
                         <Route path="/drugstore" element={!user ? <Navigate to="/" /> : <Drugstore />} />
                         <Route path="/checkout" element={!user ? <Navigate to="/" /> :<Checkout />} />
-                        <Route path='/loginchat' element={<Homepage />} exact/>
-                        <Route path='/chats' element={<Chatpage />} /> 
                     </Routes>
         </div>
     );
