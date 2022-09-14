@@ -8,7 +8,7 @@
 /* RIGHT -------------------------------------------------------------------------------------------------- */
 
 .background {
-    width: 743px;
-    height: 743px;
+    /* width: 743px;
+    height: 743px; */
     background: url(../../../public/assets/system/loginBackground.png);
 }

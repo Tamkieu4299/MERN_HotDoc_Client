@@ -96,7 +96,8 @@ export default function Login() {
                         </form>
                     </div>
                     <div className="col">
-                        <div className="background"></div>
+                        <img src="https://www.bvbnd.vn/wp-content/uploads/2020/07/IMG_7355-scaled.jpg" alt="" className="hero"/>
+                        {/* <div className="background"></div> */}
                     </div>
                 </div>
             </div>

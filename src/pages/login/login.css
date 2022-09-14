@@ -7,8 +7,15 @@
 }
 /* RIGHT -------------------------------------------------------------------------------------------------- */
 
+.hero{
+    margin-top: 3em;
+    border-radius: 30px;
+}
+
 .background {
-    width: 743px;
-    height: 743px;
+    /* width: auto;
+    height: auto; */
+    /* width: 743px;
+    height: 743px; */
     background: url(../../../public/assets/system/loginBackground.png);
 }
