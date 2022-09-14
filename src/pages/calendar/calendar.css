@@ -4,7 +4,65 @@
     justify-content: center;
     background: #f4f6f8;
     border-radius: 60px;
+
+    margin: 0 0 20em 0;
 }
+
+/* HEADER ----------------------------------------------------------------------------- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+    background-color: #f4f6f8;
+    font-family: var(--global-head);
+    font-weight: 700;
+    
+    font-size: 35px;
+
+    padding-top: 1em;
+    margin-bottom: 1em;
+}
+
+.header--button {
+    width: auto;
+    height: auto;
+    background-color: var(--global-blue);
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1em;
+}
+.header--button:hover{
+    transition-duration: 0.2s;
+    filter: brightness(55%);
+}
+
+.header--selected-time, .header--selected-title {
+    font-size: 1em;
+
+    font-family: var(--global-head);
+    color: var(--global-blue);
+    font-weight: 400;
+
+    background-color: gainsboro;
+    border-radius: 20px;
+    padding: 0em 0.5em;
+}
+.header--selected-time{
+    margin-right: 1em;
+}
+.header--selected-title{
+    margin-left: 1em;
+}
+
+/* CALENDAR ----------------------------------------------------------------------------- */
 
 .calendar {
     width: 90%;
@@ -12,36 +70,6 @@
     margin: 0 auto;
     box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    background-color: #f4f6f8;
-    font-family: "Acephimere";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    color: #0e1952;
-    margin-bottom: 16px;
-}
-
-.nav {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #0e1952;
-    background-color: #fff;
-    border-radius: 99px;
-    color: #0e1952;
-    margin-left: 269px;
-    margin-right: 269px;
-    cursor: pointer;
-}
-
-.datetime {
-    margin: 0 auto;
-    font-size: 1em;
-    font-weight: bold;
 }
 
 .week-container,
@@ -58,23 +86,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 72px;
+    height: 2em;
     cursor: pointer;
+
+    font-size: 24px; /* IMPORTANT, DO NOT SET TO EM */
+
+    outline: dashed 1px gainsboro;
 }
 
 .day-cell--faded {
-    opacity: 0.4;
+    opacity: 0.05;
 }
 
 .day-cell--today {
-    border-radius: 99px;
+    /* border-radius: 99px; */
     background-color: #f4f6f8;
     color: black;
 }
+/* .day-cell--today:after {
+    content: "(today)";
+} */
 
 .selected, .time-selected {
-    border-radius: 99px;
-    background-color: #1abc9c;
+    /* border-radius: 99px; */
+    background-color: var(--global-green);
     color: #fff;
 }
 
@@ -88,33 +123,41 @@
     border-radius: 30px;
 }
 
-.time-cell{ 
+/* .time-cell{ 
     font-size: 1.3em;
-}
+} */
 
 .busyTime{
-    border-radius: 99px;
+    /* border-radius: 99px; */
     background-color: salmon;
     color: #fff;
 }
 
-.bookNowContain{
+/* BOTTOM ----------------------------------------------------------------------------- */
+
+.bottom-container{
     display: flex;
+    margin-top: 2em;
 }
 
-.bookNowBtn{
-    margin: 20px auto;
-    width: 197px;
-    height: 68px;
-    background: #0e1952;
-    border-radius: 40px;
+.bottom-container--button{
+    width: auto;
+    background-color: var(--global-blue);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.bottom-container--button:hover{
+    transition-duration: 0.4s;
+    filter: brightness(55%);
 }
 
-.bookNowText {
-    font-family: "Acephimere";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
+.bottom-container--button--text{
+    font-family: var(--global-head);
+    font-size: 35px;
     color: #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1em;
 }

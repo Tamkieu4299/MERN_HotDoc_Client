@@ -22,6 +22,7 @@
     "react-calendar": "^3.7.0",
     "react-chips": "^0.8.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
     "react-lottie": "^1.2.3",
     "react-notification-badge": "^1.5.1",
     "react-router-dom": "^6.3.0",

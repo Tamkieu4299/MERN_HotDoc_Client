@@ -22,17 +22,17 @@ export default function BookingHistory({ app }) {
     return (doc &&
         <>
             {/* <Link to={`/profile/${doc.username}`}> */}
-                <div className="historyCard">
-                    <div className="historyCardLeft">
+                <div className="history-card-container">
+                    <div className="history-card-container--left-card">
                         <img
                             src={
                                 doc?.profilePicture
                             }
                             alt=""
-                            className="avatar"
+                            className="history-card-container--left-card--profile-picture"
                         />
                     </div>
-                    <div className="historyCardRight">
+                    <div className="history-card-container--right-card">
                         <div className="name">{doc.username}</div>
                         <div className="info">
                             <div className="contact">{dateToString(app.bookingStartDate)}</div>

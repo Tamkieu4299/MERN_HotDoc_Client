@@ -25,23 +25,30 @@ export default function Viewdoctors() {
         <>
             <Navbar />
             <div className="viewWrapper">
+                
                 <div className="viewTop">
-                    <button className="filterBtn daily">
-                        <span className="filterBtnText">Daily</span>
+                    <button className="view-doctors--sort-button">
+                        <span className="view-doctors--sort-button--text">Ophthalmologists</span>
                     </button>
-                    <button className="filterBtn tips">
-                        <span className="filterBtnText">Tips</span>
+                    <button className="view-doctors--sort-button">
+                        <span className="view-doctors--sort-button--text">Cardiologists</span>
                     </button>
-                    <button className="filterBtn facts">
-                        <span className="filterBtnText">Facts</span>
+                    <button className="view-doctors--sort-button">
+                        <span className="view-doctors--sort-button--text">Allergists</span>
                     </button>
-                    <button className="filterBtn rec">
-                        <span className="filterBtnText">Recommend</span>
+                    <button className="view-doctors--sort-button">
+                        <span className="view-doctors--sort-button--text">Dermatologists</span>
+                    </button>
+                    <button className="view-doctors--sort-button">
+                        <span className="view-doctors--sort-button--text">More...</span>
                     </button>
                 </div>
+
+
                 <div className="viewMiddle">
                     {/* <Share /> */}
                 </div>
+                
                 <div className="viewBottom">
                     <div className="viewLeft">
                         {allDoctors.length
@@ -58,8 +65,8 @@ export default function Viewdoctors() {
                                 className="adImg"
                             />
                         </div>
-                        <div className="ranking">
-                            <div className="rankTitle">Best Doctors</div>
+                        <div className="view-doctors--doctor-ranking-container">
+                            <div className="view-doctors--doctor-ranking-text">Best Doctors</div>
                             <Ranking allDoctors={allDoctors} />
                         </div>
                     </div>

@@ -58,85 +58,146 @@ export default function Register() {
     return (
         <>
             <Navbar />
-            <div className="login">
-                <div className="loginTop">
-                    <div className="loginLeft">
-                        <div className="title">
-                            Register an account for further benefits and
-                            information.
-                        </div>
-                        <form className="form">
-                            <span className="label">Email</span>
-                            <input
-                                placeholder="youremail@gmail.com"
-                                type="email"
-                                className="input"
-                                ref={email}
-                                required
-                            />
-                            <span className="label">Username</span>
-                            <input
-                                placeholder="your username"
-                                type="username"
-                                className="input"
-                                ref={username}
-                                required
-                            />
-                            <span className="label">Password</span>
-                            <input
-                                placeholder="******"
-                                type="password"
-                                className="input"
-                                ref={password}
-                                required
-                            />
-                            <span className="label">Password again</span>
-                            <input
-                                placeholder="******"
-                                type="password"
-                                className="input"
-                                ref={passwordAgain}
-                                required
-                            />
-                            <span className="label">Phone number</span>
-                            <input
-                                placeholder="84+ 34086256"
-                                type="phoneNumber"
-                                className="input"
-                                ref={phone}
-                                required
-                            />
-                            <span className="label">ID number</span>
-                            <input
-                                placeholder="Your national ID"
-                                type="idNumber"
-                                className="input"
-                                ref={idnumber}
-                                required
-                            />
-                            <div className="choices">
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <div className="login-left--title text-center">Sign Up</div>
+                        <form className="mt-3">
+                            <div className="form-group">
+                                <label
+                                    for="emailadress"
+                                    className="col-sm-12 col-form-label"
+                                >
+                                    Email address
+                                </label>
+                                <div className="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">@</div>
+                                    </div>
+                                    <input
+                                        id="examplemailadresseFormControlInput1"
+                                        placeholder="name@example.com"
+                                        type="email"
+                                        className="form-control"
+                                        ref={email}
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label
+                                    for="username"
+                                    className="col-sm-12 col-form-label"
+                                >
+                                    Username
+                                </label>
+                                <input
+                                    id="username"
+                                    placeholder="Username"
+                                    type="text"
+                                    className="form-control"
+                                    ref={username}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label
+                                    for="password"
+                                    className="col-sm-12 col-form-label"
+                                >
+                                    Password
+                                </label>
+                                {/* <div className="col-sm-10"> */}
+                                <input
+                                    placeholder="Password"
+                                    type="password"
+                                    id="password"
+                                    className="form-control"
+                                    ref={password}
+                                    required
+                                />
+                                {/* </div> */}
+                            </div>
+                            <div className="form-group">
+                                <label
+                                    for="password"
+                                    className="col-sm-12 col-form-label"
+                                >
+                                    Password (Repeat)
+                                </label>
+                                {/* <div className="col-sm-10"> */}
+                                <input
+                                    placeholder="Password (Repeat)"
+                                    type="password"
+                                    id="password"
+                                    className="form-control"
+                                    ref={passwordAgain}
+                                    required
+                                />
+                                {/* </div> */}
+                            </div>
+                            <div className="form-group">
+                                <label
+                                    for="phonenumber"
+                                    className="col-sm-12 col-form-label"
+                                >
+                                    Phone Number
+                                </label>
+                                {/* <div className="col-sm-10"> */}
+                                <input
+                                    placeholder="Phone Number"
+                                    type="tel"
+                                    id="phonenumber"
+                                    className="form-control"
+                                    ref={phone}
+                                    required
+                                />
+                                {/* </div> */}
+                            </div>
+                            <div className="form-group">
+                                <label
+                                    for="cccd"
+                                    className="col-sm-12 col-form-label"
+                                >
+                                    Căn cước công dân
+                                </label>
+                                {/* <div className="col-sm-10"> */}
+                                <input
+                                    placeholder="Căn cước công dân"
+                                    type="number"
+                                    id="cccd"
+                                    className="form-control"
+                                    ref={idnumber}
+                                    required
+                                />
+                                {/* </div> */}
+                            </div>
+                            <div class="d-flex align-items-center mt-5">
                                 <button
-                                    className="loginButton"
                                     type="submit"
+                                    class="btn btn-primary btn-lg col"
                                     onClick={handleClickCustomer}
                                 >
-                                    <span className="loginText">Customer</span>
+                                    Sign Up as Patient
                                 </button>
+
+                                <div className="col text-center h3">OR</div>
+
                                 <button
-                                    className="loginButton"
                                     type="submit"
+                                    className="btn btn-primary btn-lg col"
                                     onClick={handleClickDoctor}
                                 >
-                                    <span className="loginText">Doctor</span>
+                                    Sign Up as Doctor
                                 </button>
                             </div>
                         </form>
                     </div>
-                    <div className="loginRight">
-                        <div className="background"></div>
+                    <div className="col">
+                        <img src="https://www.bvbnd.vn/wp-content/uploads/2020/07/IMG_7355-scaled.jpg" alt="" className="hero"/>
+                        {/* <div className="background"></div> */}
                     </div>
                 </div>
-                <div className="loginBottom"></div>
             </div>
         </>
     );

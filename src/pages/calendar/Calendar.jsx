@@ -5,6 +5,8 @@ import range from "lodash-es/range";
 import "./calendar.css";
 import Navbar from "../../components/navbar/Navbar"; import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
+import { BsCaretLeftSquareFill, BsCaretRightSquareFill } from 'react-icons/bs';
+import { BsCalendar3Event } from "react-icons/bs";
 const toArray = require("dayjs/plugin/toArray");
 dayjs.extend(toArray);
 
@@ -185,22 +187,26 @@ export default function Calendar() {
             <Navbar />
             <div className="calendarWrapper">
                 <div className="header">
+                
                     <button
                         type="button"
-                        className="nav nav--prev"
+                        className="header--button"
                         onClick={handlePrev}
                     >
-                        Back
+                        <BsCaretLeftSquareFill/>
+                         Previous Month
                     </button>
-                    <div className="datetime">
+                    <span className="header--selected-title">Selected Time</span>
+                    <div className="header--selected-time">
                         {dayObj.format("MMM DD YYYY HH:mm")}
                     </div>
                     <button
                         type="button"
-                        className="nav nav--prev"
+                        className="header--button"
                         onClick={handleNext}
                     >
-                        Next
+                        Next Month
+                        <BsCaretRightSquareFill/>
                     </button>
                 </div>
                 <div className="calendar">
@@ -267,9 +273,9 @@ export default function Calendar() {
                             );
                     })}
                 </div>
-                <div className="bookNowContain">
-                    <button className="bookNowBtn" onClick={handleBooking}>
-                        <span className="bookNowText">Book now</span>
+                <div className="bottom-container">
+                    <button className="bottom-container--button" onClick={handleBooking}>
+                        <span className="bottom-container--button--text">Book an Appointment<BsCalendar3Event/></span>
                     </button>
                 </div>
             </div>

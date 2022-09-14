@@ -8,7 +8,7 @@ export default function UserCard({ user }) {
         <>
             <Link to={`/profile/${user.username}`}>
                 <div className="userCard">
-                    <div className="cardLeft">
+                    <div className="card-left">
                         <img
                             src={
                                 user?.profilePicture
@@ -16,25 +16,25 @@ export default function UserCard({ user }) {
                                     : PF + "/person/noAvatar.png"
                             }
                             alt=""
-                            className="avatar"
+                            className="card-left--profile-picture"
                         />
                     </div>
-                    <div className="cardRight">
-                        <div className="name">{user.username}</div>
-                        <div className="info">
-                            <div className="contact">{user.email}</div>
-                            <div className="online">
+                    <div className="card-right">
+                        <div className="card-right--name">{user.username}</div>
+                        <div className="card-right--info">
+                            <div className="card-right--info--email">{user.email}</div>
+                            {/* <div className="online">
                                 <div className="onlineIcon"></div>
                                 <span className="onlineText">Online</span>
-                            </div>
+                            </div> */}
                         </div>
-                        <div className="desc">
+                        <div className="card-right--description">
                             Lorem ipsum, dolor sit amet consectetur adipisicing
                             elit. Architecto aperiam aut dolorum cumque ea
                             voluptatibus dolorem deserunt commodi impedit?
                             Consequatur!
                         </div>
-                        <div className="control">
+                        {/* <div className="control">
                             <div className="rating">
                                 <img
                                     src={PF + "system/rating.png"}
@@ -55,7 +55,7 @@ export default function UserCard({ user }) {
                                     {user.numberOfBookings}
                                 </span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </Link>

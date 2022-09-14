@@ -5,6 +5,8 @@
     margin-right: 98px;
 }
 
+/* 1. TOP ---------------------------------------------------------- */
+
 .profileTop {
     display: flex;
     padding-top: 67px;
@@ -12,7 +14,9 @@
     padding-right: 34px;
 }
 
-.topLeft {
+/* 1.1. TOP LEFT ---------------------------------------------------------- */
+
+.top-left {
     flex: 2;
     text-align: center;
     justify-content: center;
@@ -20,53 +24,66 @@
     border-radius: 40px;
 }
 
-.profileAvatar {
-    width: 147px;
-    height: 149px;
-    margin: 51px 180px 24px 180px;
-    background: #0e1952;
+.top-left--profile-picture {
+    width: 10em;
+    height: 10em;
+    margin: 3em auto 0em auto;
     border-radius: 40px;
 }
-
-.profileName {
-    width: 50%;
-    font-family: "Acephimere";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 43px;
-    color: #000000;
-    margin: 0px 180px 33px 180px;
+.top-left--profile-picture:hover {
+    filter: brightness(55%);
+	transition-duration: 0.3s;
 }
 
-.profileBook {
-    width: 197px;
-    height: 68px;
-    background: #25b79d;
-    border-radius: 40px;
-    margin: 0px 155px 40px 155px;
-}
-
-.bookText {
-    width: 99px;
-    height: 26px;
-    font-family: "Acephimere";
-    font-style: normal;
+.top-left--profile-name {
+    font-family: var(--global-head);
     font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
-    color: #ffffff;
+    font-size: 2em;
+    color: var(--global-gray);
+
+    margin: 1em auto 1em auto;
 }
 
-.topRight {
+.top-left--book-button {
+    padding: 0.5em 1em;
+    background-color: var(--global-blue);
+    border-radius: 40px;
+    margin: 0em auto 3em auto;
+}
+.top-left--book-button:hover {
+    filter: brightness(55%);
+    transition-duration: 0.3s;
+}
+
+.top-left--book-button--text {
+
+    color: #fff;
+    font-family: var(--global-head);
+    font-weight: 400;
+    font-size: 1.2em;
+
+    /* width: 99px;
+    height: 26px;
+    line-height: 26px;
+    color: #ffffff; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+/* 1.2. TOP RIGHT ---------------------------------------------------------- */
+
+.top-right {
     flex: 3;
     display: flex;
     flex-direction: column;
 }
 
 .infoTop {
-    display: flex;
     height: 100%;
+    display: flex;
 }
 
 .infoCard {
@@ -87,13 +104,16 @@
     color: #0e1952;
 }
 
-.infoBottom {
+
+/* .infoBottom {
     flex: 1;
     border-radius: 40px;
     background: #ffffff;
     margin-left: 14px;
     margin-top: 21px;
-}
+} */
+
+/* 2. BOTTOM ---------------------------------------------------------- */
 
 .profileBottom {
     display: flex;
@@ -102,44 +122,57 @@
     padding-right: 34px;
 }
 
-.bottomLeft {
+/* 2.1 BOTTOM LEFT ---------------------------------------------------------- */
+
+.bottom-left {
     background: #ffffff;
     border-radius: 30px;
     flex: 2;
     margin-left: 37px;
 }
 
-.bottomInfo {
+.bottom-left--container {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
 }
 
-.bottomInfoText {
-    margin-top: 61px;
+.bottom-left--container--title {
+
+    font-family: var(--global-head);
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--global-gray);
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    /* margin-top: 61px;
     margin-bottom: 38px;
     width: 194px;
     height: 43px;
-    font-family: "Acephimere";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
     line-height: 43px;
-    color: #0e1952;
+    */
 }
 
-.bottomInfoTextDetail {
-    margin-bottom: 38px;
+.bottom-left--container--detail {
+
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+
+
+    /* margin-bottom: 38px;
     height: 38px;
     font-family: "Acephimere";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 38px;
-    color: #000000;
+    color: #000000; */
 }
 
-.bottomRight {
+/* 2.2 BOTTOM RIGHT ---------------------------------------------------------- */
+
+.bottom-right {
     flex: 3;
     background: #ffffff;
     border-radius: 30px;
@@ -148,64 +181,51 @@
     flex-direction: column;
 }
 
-.cmtTitle {
-    width: 296px;
-    height: 43px;
-    font-family: "Acephimere";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 43px;
-    color: #0e1952;
-}
-
-.patientCmt {
-    padding-left: 49px;
-    padding-right: 44px;
-    padding-top: 64px;
+.bottom-right--container {
+    padding: 3em 2em 3em 2em;
     display: flex;
     flex-direction: column;
     flex: 1;
+    align-items: center;
 }
 
-.btnCmt {
+.bottom-right--container--title {
+    font-family: var(--global-head);
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--global-gray);
+
+    /* width: 296px;
+    height: 43px;
+    line-height: 43px; */
+}
+
+.bottom-right--container--button {
     flex: 1;
-    background: #ffffff;
-    border: 0.5px solid #000000;
-    border-radius: 24px;
-    margin-top: 50px;
+    background-color: var(--global-blue);
+    border-radius: 20px;
+    margin: 2em auto 2em auto;
+    padding: 0.5em 1em;
+}
+.bottom-right--container--button:hover {
+    filter: brightness(55%);
+    transition-duration: 0.3s;
 }
 
-.btnCmtTitle {
-    width: 281px;
-    font-family: "Acephimere";
-    font-style: normal;
+.bottom-right--container--button--text {
+    font-family: var(--global-head);
     font-weight: 400;
-    font-size: 33px;
-    line-height: 43px;
-    color: #25b79d;
+    font-size: 1.2em;
+    color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.cmtList {
-    padding-top: 116px;
+.bottom-right--container--button--carousel {
+    padding-top: 2em;
     flex: 4;
     display: flex;
     flex-direction: column;
 }
-
-/* .bookingHistory {
-    padding-left: 49px;
-    padding-right: 44px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-} */
-
-.cmtItem {
-    flex: 1;
-    background: #ffffff;
-    border: 0.5px solid #000000;
-    border-radius: 24px;
-    margin-bottom: 10px;
-}
-

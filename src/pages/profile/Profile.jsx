@@ -8,6 +8,9 @@ import { AuthContext } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import PatientShow from "../../components/PatientProfile/PatientShow";
+import Footer from "../../components/footer/Footer";
+import { BsCalendar3Event } from "react-icons/bs";
+import { AiOutlineStar } from "react-icons/ai";
 
 export default function Profile() {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -80,7 +83,7 @@ export default function Profile() {
                 <Navbar />
                 <div className="profile">
                     <div className="profileTop">
-                        <div className="topLeft">
+                        <div className="top-left">
                             <img
                                 src={
                                     user?.profilePicture
@@ -88,18 +91,18 @@ export default function Profile() {
                                         // : PF + "person/noAvatar.png"
                                 }
                                 alt=""
-                                className="profileAvatar"
+                                className="top-left--profile-picture"
                             />
-                            <span className="profileName">
+                            <div className="top-left--profile-name">
                                 {viewUser.username}
-                            </span>
+                            </div>
                             <Link to={`/calendar/${username}`} >
-                            <button className="profileBook">
-                                <span className="bookText">Book now</span>
+                            <button className="top-left--book-button">
+                                <span className="top-left--book-button--text">Book an Appointment <BsCalendar3Event/></span>
                             </button>
                             </Link>
                         </div>
-                        <div className="topRight">
+                        <div className="top-right">
                             <div className="infoTop">
                                 <div className="infoCard dept">
                                     <span className="cardTitle">
@@ -138,22 +141,22 @@ export default function Profile() {
                         </div>
                     </div>
                     <div className="profileBottom">
-                        <div className="bottomLeft">
-                            <div className="bottomInfo">
-                                <div className="bottomInfoText">
+                        <div className="bottom-left">
+                            <div className="bottom-left--container">
+                                <div className="bottom-left--container--title">
                                     Information
                                 </div>
-                                <div className="bottomInfoTextDetail">
+                                <div className="bottom-left--container--detail">
                                     Birthday:{" "}
                                     {viewUser?.dateOfBirth
                                         ? viewUser.dateOfBirth
                                         : "NaN"}
                                 </div>
-                                <div className="bottomInfoTextDetail">
+                                <div className="bottom-left--container--detail">
                                     Email:{" "}
                                     {viewUser?.email ? viewUser.email : "NaN"}
                                 </div>
-                                <div className="bottomInfoTextDetail">
+                                <div className="bottom-left--container--detail">
                                     Phone:{" "}
                                     {viewUser?.phoneNumber
                                         ? viewUser.phoneNumber
@@ -161,18 +164,18 @@ export default function Profile() {
                                 </div>
                             </div>
                         </div>
-                        <div className="bottomRight">
-                            <div className="patientCmt">
-                                <span className="cmtTitle">
-                                    Patient reviews
+                        <div className="bottom-right">
+                            <div className="bottom-right--container">
+                                <span className="bottom-right--container--title">
+                                    Patient Reviews
                                 </span>
-                                <button className="btnCmt" onClick={handleAddReview}>
-                                    <span className="btnCmtTitle">
-                                        + Add a comment
+                                <button className="bottom-right--container--button" onClick={handleAddReview}>
+                                    <span className="bottom-right--container--button--text">
+                                        Add Review <AiOutlineStar/>
                                     </span>
                                 </button>
                                 {shown && <Reviewbox viewUser={viewUser} />}
-                                <div className="cmtList">
+                                <div className="bottom-right--container--button--carousel">
                                     <ReviewCard user={viewUser} />
                                 </div>
                             </div>
@@ -193,9 +196,10 @@ export default function Profile() {
     }
 
     return (
-        <>
+        <>  
             {(viewUser && viewUser.hasOwnProperty('numberOfBookings')) && (<ProfileDoctor />)}
             {(viewUser && !viewUser.hasOwnProperty('numberOfBookings')) && (<ProfilePatient />)}
+            <Footer />
         </>
     );
 }
