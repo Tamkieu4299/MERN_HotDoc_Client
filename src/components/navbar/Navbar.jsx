@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext, useEffect, useRef, useState } from "react";
 import axios from "axios";
+import {FiExternalLink} from "react-icons/fi";
 
 export default function Navbar() {
     const { user } = useContext(AuthContext);
@@ -26,7 +27,7 @@ export default function Navbar() {
             <div className="navCenter">
                 <Link to={"/"}><div className="page">News Feed</div></Link>
                 <Link to={"/viewdoctors"}><div className="page">Find a Doctor</div></Link>
-                <a href="https://bvbnd-messenger.herokuapp.com/" className="page">Consult Online</a>
+                <a href="https://bvbnd-messenger.herokuapp.com/" className="page d-flex align-items-center" target="_blank">Consult Online <FiExternalLink/></a>
                 <Link to={"/drugstore"}><div className="page">Store</div></Link>
             </div>
             <div className="navRight">
