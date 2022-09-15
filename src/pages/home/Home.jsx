@@ -110,7 +110,7 @@ export default function Home() {
                     <div className="homeRight">
                         <div className="adBanner">
                             <img
-                                src="https://www.bvbnd.vn/wp-content/uploads/2020/07/IMG_7355-scaled.jpg"
+                                src={`${PF}hero-image.jpg`}
                                 alt=""
                                 className="adImg"
                             />

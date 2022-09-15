@@ -21,6 +21,8 @@ function addDotAfterThreeDigit(number) {
 const ProductItem = (props) => {
     const { dispatch } = useContext(ProductContext);
     const item = props.drugItem;
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
     return (
         <>
             {/* <Col>
@@ -62,7 +64,7 @@ const ProductItem = (props) => {
                 {/* Maybe add .card-img-top to img tag? */}
                 <img
                     className="store--image"
-                    src="https://images.wsj.net/im-535344/?width=400&size=1.5 store--image"
+                    src={`${PF}drugstore-thumbnail.jpg`}
                     alt="Card image cap"
                 />
                 <div className="card-body">

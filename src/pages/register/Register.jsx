@@ -14,6 +14,7 @@ export default function Register() {
     const phone = useRef();
     const idnumber = useRef();
     const navigate = useNavigate();
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
     const handleClickCustomer = async (e) => {
         e.preventDefault();
@@ -61,7 +62,7 @@ export default function Register() {
     return (
         <>
             {/* <Navbar /> */}
-            <div className="container">
+            <div className="container my-5">
                 <div className="row">
                     <div className="col">
                         <div className="login-left--title text-center">Sign Up</div>
@@ -197,7 +198,7 @@ export default function Register() {
                         </form>
                     </div>
                     <div className="col">
-                        <img src="https://www.bvbnd.vn/wp-content/uploads/2020/07/IMG_7355-scaled.jpg" alt="" className="hero"/>
+                        <img src={`${PF}hero-image.jpg`} alt="" className="hero"/>
                         {/* <div className="background"></div> */}
                     </div>
                 </div>

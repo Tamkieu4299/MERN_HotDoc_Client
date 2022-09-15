@@ -10,6 +10,7 @@ export default function Login() {
     const email = useRef();
     const password = useRef();
     const { user, isFetching, error, dispatch } = useContext(AuthContext);
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
     const handleClickCustomer = (e) => {
         e.preventDefault();
@@ -100,7 +101,7 @@ export default function Login() {
                         </Link>
                     </div>
                     <div className="col">
-                        <img src="https://www.bvbnd.vn/wp-content/uploads/2020/07/IMG_7355-scaled.jpg" alt="" className="hero"/>
+                        <img src={`${PF}hero-image.jpg`} alt="" className="hero"/>
                         {/* <div className="background"></div> */}
                     </div>
                 </div>

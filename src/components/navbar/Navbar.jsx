@@ -63,7 +63,7 @@ export default function Navbar() {
                 <Link to={"/"}>
                     <div class="navbar-brand d-flex align-items-center navbar--left--container" >
                         <div className="navbar--left--logo">
-                            <img src="https://www.bvbnd.vn/wp-content/uploads/2020/08/LogoBVBND.png" alt="bvbnd-logo" />
+                            <img src={`${PF}bvbnd-logo.png`} alt="bvbnd-logo" />
                         </div>
                         <div className="navbar--left--text">BỆNH VIỆN BỆNH NHIỆT ĐỚI</div>
                     </div>
