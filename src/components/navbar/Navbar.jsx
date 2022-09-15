@@ -120,40 +120,7 @@ export default function Navbar() {
                         <div className="btn btn-secondary" onClick={handleLogout}>Sign Out</div>
                     )}
                 </div>
-<<<<<<< Updated upstream
-            </Link>
-            <div className="navCenter">
-                <Link to={"/"}><div className="page">News Feed</div></Link>
-                <Link to={"/viewdoctors"}><div className="page">{}Find</div></Link>
-                <a href="https://bvbnd-messenger.herokuapp.com/" className="page">Consult Online</a>
-                <Link to={"/drugstore"}><div className="page">Store</div></Link>
-            </div>
-            <div className="navRight">
-                {user && (
-                    <Link to={`/profile/${user.username}`}>
-                        <img
-                            src={
-                                user?.profilePicture
-                            }
-                            alt=""
-                            className="navAvatar"
-                        />
-                    </Link>
-                )}
-                {!user ? (
-                    <button className="navBtn">
-                        <span className="btnText">Sign In</span>
-                    </button>
-                ) : (
-                    <button className="navBtn" onClick={handleLogout}>
-                        <span className="btnText">Sign Out</span>
-                    </button>
-                )}
-            </div>
-        </div>
-=======
             </nav>
         </>
->>>>>>> Stashed changes
     );
 }
