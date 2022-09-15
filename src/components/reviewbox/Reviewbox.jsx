@@ -35,7 +35,8 @@ export default function Reviewbox({viewUser}) {
                 </div>
                 {/* <hr className="shareHr" /> */}
                 <form className="shareBottom" onSubmit={submitHandler}>
-                    <button className="review-box--button" type="submit">
+                    {/* Old class name: review-box--button */}
+                    <button className="btn btn-success" type="submit">
                         Submit
                     </button>
                 </form>

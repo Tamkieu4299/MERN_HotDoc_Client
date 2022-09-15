@@ -7,8 +7,6 @@ export default function PatientProfilePage() {
     return (
         <div className="container">
             <PatientShow />
-            {/* <hr /> */}
-            {/* <PatientForm /> */}
         </div>
     );
 }

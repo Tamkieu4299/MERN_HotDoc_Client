@@ -55,7 +55,7 @@ export default function PatientShow({ viewUser }) {
     return (
         appsCustomer && (
             <>
-                <div className="container">
+                <div className="container my-5">
                     <div className="row justify-content-center">
                         <div className="col mx-3 p-5 patient-show--left-card bg-light">
                             <h1 className="text-center patientshow-left-card--title">Patient</h1>

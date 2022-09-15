@@ -1,6 +1,9 @@
 .navbar-custom{
-    padding: 60px 0px; /* 0px because I wrote px-5 in navbar.js */
+    /* 0px because I wrote px-5 in navbar.js */
+    /* padding: 60px 0px!important; */
+    
     transition-duration: 0.3s;
+    transition: all 0.3s ease-in-out; 
 }
 
 /* LEFT ------------ */

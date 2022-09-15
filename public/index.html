@@ -39,14 +39,17 @@
 
     <!-- Script to shrink Navbar when scrolled down -->
     <script>
+        window.onload = function () {
+            document.getElementById("navbar").style.padding = "60px 0px"; // force navbar large khi load trang
+        }
         window.onscroll = function () {
             scrollFunction();
         };
 
         function scrollFunction() {
             if (
-                document.body.scrollTop > 1 ||
-                document.documentElement.scrollTop > 1
+                // document.body.scrollTop > 1 ||
+                document.documentElement.scrollTop > 10
             ) {
                 document.getElementById("navbar").style.padding = "0px 0px";
                 // document.getElementById("navbar-logo").style.width = "50px";

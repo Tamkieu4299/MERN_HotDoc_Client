@@ -64,7 +64,7 @@
 }
 
 
-.review-box--button {
+/* .review-box--button {
     border: none;
     padding: 15px 25px;
     border-radius: 20px;
@@ -76,7 +76,7 @@
 .review-box--button:hover {
     filter: brightness(55%);
 	transition-duration: 0.3s;
-}
+} */
 
 .shareImgContainer {
     padding: 0 20px 10px 20px;

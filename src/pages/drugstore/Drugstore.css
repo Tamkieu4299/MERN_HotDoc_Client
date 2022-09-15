@@ -1,19 +1,17 @@
 .store--container{
     height: auto;
     width: 18em!important; /* DO NOT REMOVE */
-}
-
-.store--image{
-    object-fit: cover;
-}
-
-.store--container{
     transition: all 0.3s ease-in-out; 
 }
 .store--container:hover{
     transform: scale(1.02);
     filter: brightness(80%);
     outline: 2px solid var(--global-green);
+}
+
+.store--image{
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .store--description--container{
@@ -43,8 +41,4 @@
 /* WHEN MOUSE NOT HOVER (OPPOSITE OF HOVER) */
 .store--see-cart-button:not(:hover){
     transition: all 0.3s ease-in-out; 
-}
-
-.store--image{
-    border-radius: 10px;
 }

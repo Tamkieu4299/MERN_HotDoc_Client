@@ -5,8 +5,8 @@ import range from "lodash-es/range";
 import "./calendar.css";
 import Navbar from "../../components/navbar/Navbar"; import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
-import { BsCaretLeftSquareFill, BsCaretRightSquareFill } from 'react-icons/bs';
-import { BsCalendar3Event } from "react-icons/bs";
+import { HiArrowNarrowLeft, HiArrowNarrowRight } from 'react-icons/hi';
+import { BsCalendarCheck } from "react-icons/bs";
 const toArray = require("dayjs/plugin/toArray");
 dayjs.extend(toArray);
 
@@ -188,26 +188,30 @@ export default function Calendar() {
             <div className="calendarWrapper">
                 <div className="header">
                 
-                    <button
+                    {/* <button
                         type="button"
                         className="header--button"
                         onClick={handlePrev}
                     >
-                        <BsCaretLeftSquareFill/>
-                         Previous Month
-                    </button>
+                        <HiArrowNarrowLeft/>&nbsp;Previous Month
+                    </button> */}
+                    <div className="btn btn-lg btn-secondary d-flex align-items-center" onClick={handlePrev}>
+                        <HiArrowNarrowLeft/>&nbsp;Previous Month
+                    </div>
                     <span className="header--selected-title">Selected Time</span>
                     <div className="header--selected-time">
                         {dayObj.format("MMM DD YYYY HH:mm")}
                     </div>
-                    <button
+                    {/* <button
                         type="button"
                         className="header--button"
                         onClick={handleNext}
                     >
-                        Next Month
-                        <BsCaretRightSquareFill/>
-                    </button>
+                        Next Month&nbsp;<HiArrowNarrowRight/>
+                    </button> */}
+                    <div className="btn btn-lg btn-secondary d-flex align-items-center" onClick={handleNext}>
+                        Next Month&nbsp;<HiArrowNarrowRight/>
+                    </div>
                 </div>
                 <div className="calendar">
                     <div className="week-container">
@@ -273,10 +277,13 @@ export default function Calendar() {
                             );
                     })}
                 </div>
-                <div className="bottom-container">
-                    <button className="bottom-container--button" onClick={handleBooking}>
-                        <span className="bottom-container--button--text">Book an Appointment<BsCalendar3Event/></span>
-                    </button>
+                <div className="bottom-container justify-content-center">
+                    {/* <button className="bottom-container--button" onClick={handleBooking}>
+                        <span className="bottom-container--button--text">Book an Appointment&nbsp;<BsCalendarCheck/></span>
+                    </button> */}
+                    <div className="btn btn-lg btn-success d-flex align-items-center" onClick={handleBooking}>
+                        Book an Appointment&nbsp;<BsCalendarCheck/>
+                    </div>
                 </div>
             </div>
         </>

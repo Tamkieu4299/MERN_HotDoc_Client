@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import PatientShow from "../../components/PatientProfile/PatientShow";
 import Footer from "../../components/footer/Footer";
-import { BsCalendar3Event } from "react-icons/bs";
-import { AiOutlineStar } from "react-icons/ai";
+import { BsCalendarCheck } from "react-icons/bs";
+import { HiOutlineStar } from "react-icons/hi";
 
 export default function Profile() {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -97,9 +97,9 @@ export default function Profile() {
                                 {viewUser.username}
                             </div>
                             <Link to={`/calendar/${username}`} >
-                            <button className="top-left--book-button">
-                                <span className="top-left--book-button--text">Book an Appointment <BsCalendar3Event/></span>
-                            </button>
+                                <div className="btn btn-success btn-lg d-flex align-items-center justify-content-center m-5 top-left--book-button">
+                                    Book an Appointment&nbsp;<BsCalendarCheck/>
+                                </div>
                             </Link>
                         </div>
                         <div className="top-right">
@@ -169,11 +169,9 @@ export default function Profile() {
                                 <span className="bottom-right--container--title">
                                     Patient Reviews
                                 </span>
-                                <button className="bottom-right--container--button" onClick={handleAddReview}>
-                                    <span className="bottom-right--container--button--text">
-                                        Add Review <AiOutlineStar/>
-                                    </span>
-                                </button>
+                                <div className="btn btn-secondary btn-lg d-flex align-items-center" onClick={handleAddReview}>
+                                    Add Review&nbsp;<HiOutlineStar/>
+                                </div>
                                 {shown && <Reviewbox viewUser={viewUser} />}
                                 <div className="bottom-right--container--button--carousel">
                                     <ReviewCard user={viewUser} />
