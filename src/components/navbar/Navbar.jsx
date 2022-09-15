@@ -83,7 +83,7 @@ export default function Navbar() {
                                 <div class="navbar--center--text mx-3 text-secondary">News Feed</div>
                             </li>
                         </Link>
-                        <Link to={"/viewdoctors"}>
+                        <Link to={"/view"}>
                             <li class="nav-item">
                                 <div class="navbar--center--text mx-3 text-secondary">Find</div>
                             </li>

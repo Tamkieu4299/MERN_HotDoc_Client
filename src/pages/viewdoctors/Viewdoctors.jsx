@@ -13,7 +13,6 @@ export default function Viewdoctors() {
     const [allDoctors, setAllDoctors] = useState([]);
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
-
     useEffect(() => {
         const fetchUser = async () => {
             const res = await axios.get("/doctors/all/");

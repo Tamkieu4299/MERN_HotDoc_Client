@@ -32,8 +32,8 @@ function App() {
                             element={user ? <Navigate to="/" /> : <Register />}
                         />
                         <Route
-                            path="/viewdoctors"
-                            element={!user ? <Navigate to="/" /> : (user.hasOwnProperty('numberOfBookings') ? <Viewusers /> : <Viewdoctors />)}
+                            path="/view"
+                            element={!user ? <Navigate to="/" /> :  (user.hasOwnProperty('numberOfBookings') ? <Viewusers /> : <Viewdoctors />)}
                         />
                         <Route
                             path="/profile/:username"
