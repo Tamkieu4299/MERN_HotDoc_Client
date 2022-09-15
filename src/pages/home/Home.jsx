@@ -36,7 +36,7 @@ export default function Home() {
     useEffect(() => {
         const fetchUser = async () => {
             const res = await axios.get("/doctors/all/");
-            setAllDoctors(res.data);
+            setAllDoctors(res.data);    
         };
         fetchUser();
     }, [user._id]);
@@ -83,7 +83,7 @@ export default function Home() {
                                     <div className="result">
                                         <img
                                             className="resultImg"
-                                            src={u.profilePicture}
+                                            src={!u?.profilePicture ? u.profilePicture : PF+"person/noAvatar.png"}
                                             alt=""
                                         />
                                         <span className="resultUsername">

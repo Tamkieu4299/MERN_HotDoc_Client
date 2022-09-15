@@ -85,7 +85,7 @@ export default function Navbar() {
                         </Link>
                         <Link to={"/viewdoctors"}>
                             <li class="nav-item">
-                                <div class="navbar--center--text mx-3 text-secondary">Find a Doctor</div>
+                                <div class="navbar--center--text mx-3 text-secondary">Find</div>
                             </li>
                         </Link>
                         <li class="nav-item"> 
