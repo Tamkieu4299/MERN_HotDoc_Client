@@ -80,20 +80,20 @@ export default function Navbar() {
                     <ul class="navbar-nav mr-auto">
                         <Link to={"/"}>
                             <li class="nav-item">
-                                <div class="navbar--center--text mx-3 text-dark">News Feed</div>
+                                <div class="navbar--center--text mx-3 text-secondary">News Feed</div>
                             </li>
                         </Link>
                         <Link to={"/viewdoctors"}>
                             <li class="nav-item">
-                                <div class="navbar--center--text mx-3 text-dark">Find a Doctor</div>
+                                <div class="navbar--center--text mx-3 text-secondary">Find a Doctor</div>
                             </li>
                         </Link>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center navbar--center--text mx-3 text-dark" href="https://bvbnd-messenger.herokuapp.com" target="_blank">Consult Online&nbsp;<FiExternalLink/></a>
+                            <a class="d-flex align-items-center navbar--center--text mx-3 text-secondary" href="https://bvbnd-messenger.herokuapp.com" target="_blank">Consult Online&nbsp;<FiExternalLink/></a>
                         </li>
                         <Link to={"/drugstore"}>
                             <li class="nav-item">
-                                <div class="navbar--center--text mx-3 text-dark">Store</div>
+                                <div class="navbar--center--text mx-3 text-secondary">Store</div>
                             </li>
                         </Link>
                     </ul>

@@ -99,9 +99,7 @@ export default function Post({ post }) {
                             className="likeIcon"
                             onClick={likeHandler}
                         /> */}
-
                         <FcLike onClick={likeHandler} className="likeIcon" />
-                        
                         <span className="postLikeCounter">{like}</span>
                     </div>
                     <div className="postBottomRight">
