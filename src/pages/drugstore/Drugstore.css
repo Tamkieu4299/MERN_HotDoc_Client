@@ -7,17 +7,13 @@
     object-fit: cover;
 }
 
-/* ON HOVER */
+.store--container{
+    transition: all 0.3s ease-in-out; 
+}
 .store--container:hover{
     transform: scale(1.02);
     filter: brightness(80%);
     outline: 2px solid var(--global-green);
-
-    transition-duration: 0.1s;
-}
-/* WHEN MOUSE NOT HOVER (OPPOSITE OF HOVER) */
-.store--container:not(:hover){
-    transition-duration: 0.1s;
 }
 
 .store--description--container{
@@ -42,11 +38,11 @@
 .store--see-cart-button:hover{
     /* transform: scale(1.00); */
     filter: brightness(80%);
-    transition: all 0.4s ease-in-out; 
+    transition: all 0.3s ease-in-out; 
 }
 /* WHEN MOUSE NOT HOVER (OPPOSITE OF HOVER) */
 .store--see-cart-button:not(:hover){
-    transition: all 0.4s ease-in-out; 
+    transition: all 0.3s ease-in-out; 
 }
 
 .store--image{

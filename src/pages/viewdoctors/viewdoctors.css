@@ -37,8 +37,7 @@
     transition-duration: 0.2s;
 }
 .view-doctors--sort-button--text {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
+    font-family: var(--global-head);
     font-weight: 400;
     font-size: 26px;
     line-height: 38px;
@@ -89,10 +88,8 @@
 }
 
 .view-doctors--doctor-ranking-text{
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
+    font-family: var(--global-head);
     font-weight: 700;
-
 
     font-size: 36px;
     line-height: 43px;

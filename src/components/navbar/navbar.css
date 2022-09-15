@@ -1,102 +1,55 @@
-.navbarWrapper {
-    background-color: #ffff;
-    /* height: 190px; */ /* replaced by the padding below */
-    padding: 60px 0px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    /* position: sticky; */
-    /* z-index: 999; */
+.navbar-custom{
+    padding: 60px 0px; /* 0px because I wrote px-5 in navbar.js */
     transition-duration: 0.3s;
 }
 
-.navLeft {
-    flex: 8;
-    display: flex;
-    padding-left: 104px;
-    align-items: center;
+/* LEFT ------------ */
+.navbar--left--container{
+    transition: all 0.3s ease-in-out; 
 }
-.navLeft:hover{
+.navbar--left--container:hover{
     filter: brightness(55%);
+    background-color: gainsboro;
     border-radius: 20px;
-	transition-duration: 0.3s;
 }
 
-.logoText {
-    font-family: "Montserrat";
-    font-style: normal;
+.navbar--left--logo{
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+}
+.navbar--left--text{
+    font-family: var(--global-head);
     font-weight: 700;
-    font-size: 1.5em;
+
+    font-size: 1.2em;
     color: var(--global-green);
 }
 
-.navCenter {
-    display: flex;
-    flex: 10;
-}
-
-.page {
+/* CENTER ------------------ */
+.navbar--center--text {
     font-family: var(--global-head);
-    font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    margin-left: 3em;
-    color: #2d2d2d;
+    font-size: 1.5em;
+    transition: all 0.3s ease-in-out; 
 }
-.page:hover{
-    /* filter: brightness(55%); */
+.navbar--center--text:hover{
+    filter: brightness(55%);
     background-color: gainsboro;
     border-radius: 20px;
-	transition-duration: 0.3s;
+    text-decoration: underline;
 }
 
-.navRight {
-    flex: 3;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-around; */
-}
-
-.navBtn {
-    width: 8em; 
-    height: 2.5em;
-    background: var(--global-blue);
-    border-radius: 20px;
-    margin-left: 2em;
-    /* margin-right: 96px; */
-}
-.navBtn:hover{
-    filter: brightness(55%);
-	transition-duration: 0.3s;
-}
-
-.btnText {
-    width: 68px;
-    height: 26px;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    color: #ffffff;
-}
-
-.navAvatar{
+/* RIGHT --------------------- */
+.navbar--right--profile-picture{
     width: 40px;
     height: auto;
-    /* height: 40px; */
+
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+    transition: all 0.3s ease-in-out; 
 }
-.navAvatar:hover{
+.navbar--right--profile-picture:hover{
     filter: brightness(55%);
-	transition-duration: 0.3s;
-}
-
-.navbar-bvbnd-logo-container{
-    max-height: 50px;
-    max-width: 50px;
-    object-fit: cover;
 }

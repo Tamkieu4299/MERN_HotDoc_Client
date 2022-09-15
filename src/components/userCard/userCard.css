@@ -32,7 +32,6 @@
 
 .card-right--name {
     font-family: var(--global-head);
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 16px;
@@ -71,7 +70,6 @@
 
 /* .onlineText {
     font-family: "Acephimere";
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 16px;
@@ -104,7 +102,6 @@
 
 /* .ratingNumber{
     font-family: 'Acephimere';
-    font-style: normal;
     font-weight: 100;
     font-size: 24px;
     line-height: 16px;
