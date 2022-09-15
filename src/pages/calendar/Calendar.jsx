@@ -108,7 +108,8 @@ export default function Calendar() {
         };
         try {
             await axios.post("/appointments/booking", newAppointment);
-            window.location.reload();
+            window.alert("SUCCESS: Appointment booked!");
+            window.location.href = "/viewdoctors";
         } catch (err) {
             console.log(err);
         }

@@ -29,6 +29,7 @@ export default function Register() {
             };
             try {
                 await axios.post("/customers/register", user);
+                window.alert("SUCCESS: You have registered as a patient! Please nagivate to the login page to login as a patient.");
                 navigate("/login");
             } catch (err) {
                 console.log(err);
@@ -49,6 +50,7 @@ export default function Register() {
             };
             try {
                 await axios.post("/doctors/register", user);
+                window.alert("SUCCESS: You have registered as a doctor! Please nagivate to the login page to login as a doctor.");
                 navigate("/login");
             } catch (err) {
                 console.log(err);
@@ -179,7 +181,7 @@ export default function Register() {
                                     className="btn btn-success btn-lg col-5  d-flex align-items-center justify-content-center"
                                     onClick={handleClickCustomer}
                                 >
-                                    Sign In as Patient&nbsp;<FiLogIn/>
+                                    Sign Up as Patient&nbsp;<FiLogIn/>
                                 </button>
 
                                 <div className="col-2 text-center">OR</div>
@@ -189,7 +191,7 @@ export default function Register() {
                                     className="btn btn-secondary btn-lg col-5  d-flex align-items-center justify-content-center"
                                     onClick={handleClickDoctor}
                                 >
-                                    Sign In as Doctor&nbsp;<FiLogIn/>
+                                    Sign Up as Doctor&nbsp;<FiLogIn/>
                                 </button>
                             </div>
                         </form>

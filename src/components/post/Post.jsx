@@ -5,6 +5,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import axios from "axios";
 // import { MoreVert } from "@material-ui/icons";
 import { format } from "timeago.js";
+import { FcLike } from "react-icons/fc";
 
 export default function Post({ post }) {
     const [like, setLike] = useState(post.likes.length);
@@ -92,12 +93,15 @@ export default function Post({ post }) {
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">
-                        <img
+                        {/* <img
                             src={`${PF}heart.png`}
                             alt=""
                             className="likeIcon"
                             onClick={likeHandler}
-                        />
+                        /> */}
+
+                        <FcLike onClick={likeHandler} className="likeIcon" />
+                        
                         <span className="postLikeCounter">{like}</span>
                     </div>
                     <div className="postBottomRight">

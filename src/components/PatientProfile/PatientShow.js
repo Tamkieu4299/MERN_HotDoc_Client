@@ -93,7 +93,7 @@ export default function PatientShow({ viewUser }) {
                             )}
                         </div>
                         <div className="col mx-3 p-5 patient-show--right-card bg-light">
-                            <h1 className="text-center patientshow-right-card--title">Appoinment History</h1>
+                            <h1 className="text-center patientshow-right-card--title">Appointment History</h1>
 
                             <div className="slideshow">
 

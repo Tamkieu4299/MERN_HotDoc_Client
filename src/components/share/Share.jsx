@@ -9,6 +9,7 @@ import "./share.css";
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
+import { FiUpload } from "react-icons/fi";
 
 export default function Share() {
     const { user } = useContext(AuthContext);
@@ -83,9 +84,10 @@ export default function Share() {
                                 htmlColor="tomato"
                                 className="shareIcon"
                             /> */}
-                            <span className="news-feed--upload-text">
-                                Photo/Video
-                            </span>
+                            {/* Old class name: .news-feed--upload-text */}
+                            <div className="btn btn-secondary d-flex align-items-center">
+                                Upload Image&nbsp;<FiUpload />
+                            </div>
                             <input
                                 style={{ display: "none" }}
                                 type="file"
@@ -110,7 +112,8 @@ export default function Share() {
                             <span className="news-feed--upload-text">Feelings</span>
                         </div> */}
                     </div>
-                    <button className="news-feed--post-button" type="submit">
+                    {/* Old class name: news-feed--post-button */}
+                    <button className="btn btn-success d-flex align-items-center" type="submit">
                         Post
                     </button>
                 </form>

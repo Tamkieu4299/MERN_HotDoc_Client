@@ -25,7 +25,7 @@ export default function Viewdoctors() {
     return (
         <>
             <Navbar />
-            <div className="viewWrapper">
+            <div className="viewWrapper pb-5">
                 
                 <div className="viewTop">
                     <button className="view-doctors--sort-button">

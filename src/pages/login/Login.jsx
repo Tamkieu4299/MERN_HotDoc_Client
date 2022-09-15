@@ -28,7 +28,7 @@ export default function Login() {
     return (
         <>
             {/* <Navbar /> */}
-            <div className="container">
+            <div className="container my-5">
                 <div className="row">
                     <div className="col">
                         <div className="login-left--title text-center">Sign In</div>
