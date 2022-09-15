@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "../../components/navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { FiLogIn } from "react-icons/fi";
 
 export default function Register() {
     const username = useRef();
@@ -57,7 +58,7 @@ export default function Register() {
 
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="container">
                 <div className="row">
                     <div className="col">
@@ -175,20 +176,20 @@ export default function Register() {
                             <div className="d-flex align-items-center mt-5">
                                 <button
                                     type="submit"
-                                    className="btn btn-primary btn-lg col"
+                                    className="btn btn-success btn-lg col-5  d-flex align-items-center justify-content-center"
                                     onClick={handleClickCustomer}
                                 >
-                                    Sign Up as Patient
+                                    Sign In as Patient&nbsp;<FiLogIn/>
                                 </button>
 
-                                <div className="col text-center h3">OR</div>
+                                <div className="col-2 text-center">OR</div>
 
                                 <button
                                     type="submit"
-                                    className="btn btn-primary btn-lg col"
+                                    className="btn btn-secondary btn-lg col-5  d-flex align-items-center justify-content-center"
                                     onClick={handleClickDoctor}
                                 >
-                                    Sign Up as Doctor
+                                    Sign In as Doctor&nbsp;<FiLogIn/>
                                 </button>
                             </div>
                         </form>

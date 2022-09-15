@@ -3,6 +3,8 @@ import { useContext, useRef } from "react";
 import { loginCallCustomer, loginCallDoctor } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
+import { Link } from "react-router-dom";
+import { FiLogIn } from "react-icons/fi";
 
 export default function Login() {
     const email = useRef();
@@ -25,7 +27,7 @@ export default function Login() {
     };
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="container">
                 <div className="row">
                     <div className="col">
@@ -71,29 +73,31 @@ export default function Login() {
                             <div className="d-flex align-items-center mt-5">
                                 <button
                                     type="submit"
-                                    className="btn btn-primary btn-lg col"
+                                    className="btn btn-success btn-lg col-5 d-flex align-items-center justify-content-center"
                                     onClick={handleClickCustomer}
                                 >
-                                    Sign In as Patient
+                                    Sign In as Patient&nbsp;<FiLogIn/>
                                 </button>
                                 
-                                <div className="col text-center h3">OR</div>
+                                <div className="col-2 text-center">OR</div>
                                 
                                 <button
                                     type="submit"
-                                    className="btn btn-primary btn-lg col"
+                                    className="btn btn-secondary btn-lg col-5 d-flex align-items-center justify-content-center"
                                     onClick={handleClickDoctor}
                                 >
-                                    Sign In as Doctor
+                                    Sign In as Doctor&nbsp;<FiLogIn/>
                                 </button>
                             </div>
-
-                            <hr className="my-5"/>
-
-                            <div>
-                                <span>Sign Up Button</span>
-                            </div>
                         </form>
+                        <hr className="my-5"/>
+                        <Link to={"/register"}>
+                            <div className="d-flex justify-content-center">
+                                <div className="btn btn-secondary btn-lg d-flex align-items-center justify-content-center col-6" >
+                                    Sign Up&nbsp;<FiLogIn/>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                     <div className="col">
                         <img src="https://www.bvbnd.vn/wp-content/uploads/2020/07/IMG_7355-scaled.jpg" alt="" className="hero"/>
