@@ -103,7 +103,7 @@ export default function Profile() {
                             </Link>
                         </div>
                         <div className="top-right">
-                            <div className="infoTop">
+                            {/* <div className="infoTop">
                                 <div className="infoCard dept">
                                     <span className="cardTitle">
                                         Current Department
@@ -134,7 +134,7 @@ export default function Profile() {
                                         :"NaN"}
                                     </p>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* <div className="infoBottom">
 
                             </div> */}
@@ -146,12 +146,12 @@ export default function Profile() {
                                 <div className="bottom-left--container--title">
                                     Information
                                 </div>
-                                <div className="bottom-left--container--detail">
+                                {/* <div className="bottom-left--container--detail">
                                     Birthday:{" "}
                                     {viewUser?.dateOfBirth
                                         ? viewUser.dateOfBirth
                                         : "NaN"}
-                                </div>
+                                </div> */}
                                 <div className="bottom-left--container--detail">
                                     Email:{" "}
                                     {viewUser?.email ? viewUser.email : "NaN"}

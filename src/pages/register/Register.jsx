@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
+import { HiOutlineLogin } from "react-icons/hi";
 
 export default function Register() {
     const username = useRef();
@@ -196,6 +197,14 @@ export default function Register() {
                                 </button>
                             </div>
                         </form>
+                        <hr className="my-5"/>
+                        <Link to={"/"}>
+                            <div className="d-flex justify-content-center">
+                                <div className="btn btn-secondary btn-lg d-flex align-items-center justify-content-center col-6" >
+                                <HiOutlineLogin/>&nbsp;Sign In
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                     <div className="col">
                         <img src={`${PF}hero-image.jpg`} alt="" className="hero"/>
