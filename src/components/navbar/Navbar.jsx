@@ -112,6 +112,7 @@ export default function Navbar() {
                                 alt=""
                                 className="navbar--right--profile-picture mx-2"
                             />
+                            <div className="btn btn-secondary mx-3">Personal Profile</div>
                         </Link>
                     )}
                     {!user ? (
