@@ -109,7 +109,7 @@ export default function Calendar() {
         try {
             await axios.post("/appointments/booking", newAppointment);
             window.alert("SUCCESS: Appointment booked!");
-            window.location.href = "/viewdoctors";
+            window.location.href = "/view";
         } catch (err) {
             console.log(err);
         }
