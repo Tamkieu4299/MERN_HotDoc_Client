@@ -13,6 +13,7 @@ export default function PatientShow({ viewUser }) {
     const [index, setIndex] = useState(0);
     const [shown, setShown] = useState(false);
     const timeoutRef = useRef(null);
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
@@ -61,7 +62,7 @@ export default function PatientShow({ viewUser }) {
                             <h1 className="text-center patientshow-left-card--title">Patient</h1>
                             <img
                                 className="patient-show--left-card--profile-picture d-block mx-auto"
-                                src={viewUser?.profilePicture}
+                                src={PF + "person/noAvatar.png"}
                                 alt=""
                             />
                             <div className="mb-3">

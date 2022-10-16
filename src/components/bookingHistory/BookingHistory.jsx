@@ -26,7 +26,7 @@ export default function BookingHistory({ app }) {
                     <div className="history-card-container--left-card">
                         <img
                             src={
-                                doc?.profilePicture
+                                PF + "person/noAvatar.png"
                             }
                             alt=""
                             className="history-card-container--left-card--profile-picture"

@@ -11,9 +11,9 @@ export default function UserCard({ user }) {
                     <div className="card-left">
                         <img
                             src={
-                                user?.profilePicture
-                                    ? user.profilePicture
-                                    : PF + "/person/noAvatar.png"
+                                // user?.profilePicture
+                                //     ? user.profilePicture
+                                     PF + "/person/noAvatar.png"
                             }
                             alt=""
                             className="card-left--profile-picture"

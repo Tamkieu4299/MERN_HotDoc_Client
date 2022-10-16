@@ -22,9 +22,9 @@ export default function Ranking({ allDoctors }) {
                                 <span className="rankPosition">{position++}</span>
                                 <img
                                     src={
-                                        doc?.profilePicture
-                                            ? doc.profilePicture
-                                            : PF + "/person/noAvatar.png"
+                                        // doc?.profilePicture
+                                        //     ? doc.profilePicture
+                                             PF + "/person/noAvatar.png"
                                     }
                                     alt=""
                                     className="rankAvatar"

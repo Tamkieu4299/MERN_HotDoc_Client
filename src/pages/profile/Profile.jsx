@@ -86,9 +86,9 @@ export default function Profile() {
                         <div className="top-left">
                             <img
                                 src={
-                                    user?.profilePicture
+                                    // user?.profilePicture
                                         // ? PF + viewUser.profilePicture
-                                        // : PF + "person/noAvatar.png"
+                                        PF + "person/noAvatar.png"
                                 }
                                 alt=""
                                 className="top-left--profile-picture"
