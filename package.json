@@ -52,5 +52,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://hospitalbookingbackend.herokuapp.com/api/"
+  "proxy": "https://mernultimatehospitalapi.onrender.com/api/"
 }
