@@ -28,10 +28,10 @@
     "timeago.js": "^4.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "yarn start",
+    "build": "yarn build",
+    "test": "yarn test",
+    "eject": "yarn eject"
   },
   
   "eslintConfig": {
